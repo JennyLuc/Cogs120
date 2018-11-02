@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Re-Inspire Yourself</title>
+    <title>UpTo</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +28,14 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <!-- Navigation ALSO, I ADDED 0px PADDING TO TOP AND BOTTOM IDK IF IT MESSES A LOT WITH BOOSTRAP BUT IDK -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" 
+   style="padding-top: 0px; padding-bottom: 0px;" 
+    id="mainNav">
+    <!-- This is what I edited^ -John-->
+
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#portfolio">Re-Inspire Yourself</a>
+        <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -68,32 +72,27 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">List of Activities</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">  [name's] Activities</h2>
         <hr class="star-dark mb-5">
         <div class="row">
 
 
 
 
-          <div class="col-md-12 col-lg-12">
-            <row>
-              <ul style="list-style:none">
-                <li>
-                  <img class="img-fluid" width="500" src="img/portfolio/cabin.png" alt="">
-                  <p style="font-size:200%"> Wood Work </p>
-                </li>
-              </ul>
-            </row>
-          </div>
-
-
 
           <div class="col-md-12 col-lg-12">
-            <row>
+            <row> 
               <ul style="list-style:none">
                 <li>
-                  <img class="img-fluid" width="500" src="img/portfolio/cake.png" alt="">
-                  <p style="font-size:200%"> Baking </p>
+                  <img class="img-fluid" width="500" src="img/portfolio/cabin.png" display="inline-block" alt=""> 
+                  <a style="font-size:300%" display="inline-block"> NAME OF ACTIVITY #1</a>
+                </li>
+                <li>
+                  <a style="font-size:150%" display="inline-block"> Description of why the person <br>was inspired to start their activity</a>
+                  <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block">  •   •   • </a>
+                </li>
+                <li>
+                  <img class="img-fluid" src="project_pic.png" width="720">
                 </li>
               </ul>
             </row>
@@ -102,44 +101,89 @@
 
 
 
-                    <div class="col-md-12 col-lg-12">
-            <row>
+
+
+
+
+          <div class="col-md-12 col-lg-12">
+            <row> 
               <ul style="list-style:none">
                 <li>
-                  <img class="img-fluid" width="500" src="img/portfolio/game.png" alt="">
-                  <p style="font-size:200%"> Gaming Project </p>
+                  <img class="img-fluid" width="500" src="img/portfolio/cake.png" display="inline-block" alt=""> 
+                  <a style="font-size:300%" display="inline-block"> NAME OF ACTIVITY #2</a>
+                </li>
+                <li>
+                  <a style="font-size:150%" display="inline-block"> Description of why the person <br>was inspired to start their activity</a>
+                  <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block">  •   •   • </a>
+                </li>
+                <li>
+                  <img class="img-fluid" src="project_pic.png" width="720">
                 </li>
               </ul>
             </row>
           </div>
 
+
+
+
+
+
+
+
+          <div class="col-md-12 col-lg-12">
+            <row> 
+              <ul style="list-style:none">
+                <li>
+                  <img class="img-fluid" width="500" src="img/portfolio/circus.png" display="inline-block" alt=""> 
+                  <a style="font-size:300%" display="inline-block"> NAME OF ACTIVITY #3</a>
+                </li>
+                <li>
+                  <a style="font-size:150%" display="inline-block"> Description of why the person <br>was inspired to start their activity</a>
+                  <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block">  •   •   • </a>
+                </li>
+                <li>
+                  <img class="img-fluid" src="project_pic.png" width="720">
+
+                  <!-- F A S T method to getting the activity button live -->
+                </li>
+                <img class="img-fluid" width="275" src="activity_button.jpg" alt="">
+                <li>
+
+
+              </ul>
+            </row>
+          </div>
 
 
 
 
 
         </div>
-      </div>
-    </section>
+      </section>
 
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
-      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
 
-    <!-- Portfolio Modals -->
+
+
+
+
+
+
+
+
+
 
     <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+    <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
       <div class="portfolio-modal-dialog bg-white">
         <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
         </a>
         <div class="container text-center">
           <div class="row">
+
+
+<!-- Content of modal -->
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary text-uppercase mb-0">Wood Work</h2>
               <hr class="star-dark mb-5">
@@ -150,10 +194,23 @@
                 <i class="fa fa-close"></i>
                 Close</a>
             </div>
+
+
+
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Portfolio Modal 2 -->
     <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
@@ -198,6 +255,13 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
