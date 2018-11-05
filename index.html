@@ -72,7 +72,7 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">  [name's] Activities</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">  [name]'s Activities</h2>
         <hr class="star-dark mb-5">
         <div class="row">
 
@@ -144,13 +144,25 @@
                 <li>
                   <img class="img-fluid" src="project_pic.png" width="720">
                 </li>
+              </ul>
 
 
-</ul>
-                  <!-- F A S T method to getting the activity button live -->
-                  <a href="NewActivity.html">
+
+              <!-- Activity Button -->
+              <a class="portfolio-item d-block" href="#portfolio-modal-1">
+                <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i class="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
                 <img class="img-fluid" width="275" src="activity_button.jpg" alt="">
               </a>
+
+
+
+
+
+
 
 
             </row>
@@ -185,17 +197,36 @@
           <div class="row">
 
 
-<!-- Content of modal -->
+            <!-- Content of modal -->
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Wood Work</h2>
+              <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-              <p class="mb-5"><center><header>Inspiration</head>
-              I wanted to learn to make homemade furnitures like what my grandfather did.</center></p>
+              <img class="img-fluid mb-5" src="add_image.png" alt="">
+
+              <!-- Need to add padding to each of these elements in the modal  -John -->
+              <h3>Name of New Activity</h3>
+              <div class="ui input">
+                <input type="text" placeholder="New Activity">
+              </div>
+              <h3> Why I wanted to start this activity?</h3>
+              <div class="ui input">
+                <input type="text" placeholder="Why....">
+              </div>
+              <button class="ui primary button">
+                Save
+              </button>
+              <button class="ui button">
+                Cancel
+              </button>
+
+
+
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
-                Close</a>
+              Close </a>
             </div>
+
+
 
 
 

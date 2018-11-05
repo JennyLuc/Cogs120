@@ -216,7 +216,13 @@ header.masthead h2 {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background-color: rgba(24, 188, 156, 0.9);
+ 
+/* Taking out the magnifying glass icon when clicking (idk how this works)
+
+background-color: rgba(24, 188, 156, 0.9)
+
+*/
+
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
