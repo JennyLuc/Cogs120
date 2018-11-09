@@ -72,4 +72,26 @@
     });
   });
 
+  $(document).ready(function() {
+    console.log('hello world');
+
+
+
+  var hellooo = {'name': 'hi', 'description': 'hello'}
+  // compile the template
+  var source   = $("#entry-template").html();
+  var template = Handlebars.compile(source);
+
+  var parentDiv = $("#templatedProjects");
+
+  // BEGIN - STEP 1
+
+  // start with a simple template
+  var html = template(hellooo);
+  console.log(html);
+  parentDiv.append(html);
+});
+
+
+
 })(jQuery); // End of use strict
