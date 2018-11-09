@@ -49,17 +49,31 @@ input{
 
 }
 
-.button:hover .button1:hover{
+.button:hover {
     background-color: #ffffff; /* Green */
     color: #008CBA;
     border: 1px solid #008CBA
 }
 
-.button:link .buton1:link{
+.button1:hover{
+    background-color: #ffffff; /* Green */
+    color: #FC4A1A;
+    border: 1px solid #FC4A1A
+}
+
+.button:link{
     background-color: #b4b4b4;
 }
 
-.button:active .button1:active{
+.buton1:link{
+    background-color: #b4b4b4;
+}
+
+.button:active {
+    background-color: #b4b4b4;
+}
+
+.button1:active{
     background-color: #b4b4b4;
 }
 
@@ -245,6 +259,7 @@ header.masthead h2 {
     font-size: 1.75em;
   }
 }
+
 
 .portfolio {
   margin-bottom: 0px;
