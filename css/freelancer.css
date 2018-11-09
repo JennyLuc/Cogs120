@@ -36,18 +36,30 @@ input{
     border-radius: 8px;
 
 }
+.button1{
+    background-color: #FC4A1A; /* Vermillion */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
 
-.button:hover {
+}
+
+.button:hover .button1:hover{
     background-color: #ffffff; /* Green */
     color: #008CBA;
     border: 1px solid #008CBA
 }
 
-.button:link {
+.button:link .buton1:link{
     background-color: #b4b4b4;
 }
 
-.button:active {
+.button:active .button1:active{
     background-color: #b4b4b4;
 }
 
@@ -249,7 +261,7 @@ header.masthead h2 {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
- 
+
 /* Taking out the magnifying glass icon when clicking (idk how this works)
 
 background-color: rgba(24, 188, 156, 0.9)
