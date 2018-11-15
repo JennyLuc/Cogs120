@@ -72,6 +72,14 @@
     });
   });
 
+
+
+
+
+
+
+
+//OUR JAVASCRIPT
   $(document).ready(function() {
     console.log('hello world');
 
@@ -91,6 +99,7 @@
   console.log(html);
   parentDiv.append(html);
 });
+
 
 
 
