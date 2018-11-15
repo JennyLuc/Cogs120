@@ -40,6 +40,7 @@
         <h1>
             Login
         </h1>
+        <!--
         <p>Username:</p>
         <div class="input">
             <input type="text" placeholder="Username">
@@ -51,7 +52,31 @@
 
         <br>
         <a class="button" href = "index.html">Login</a>
+    -->
 
+    <form name="login">
+        Username <br>
+        <input type="text" name="userid" placeholder="Username"/>
+        <br>
+        Password
+        <br>
+        <input type="password" name="pswrd" placeholder="Password"/>
+        <br>
+        <br>
+        <input class="button" onclick="check(this.form)" value="Login"/>
+        <input class="button1" value="Cancel"/>
+    </form>
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+            /*the following code checkes whether the entered userid and password are matching*/
+            if(form.userid.value == "id" && form.pswrd.value == "password") {
+                window.open('index.html')/*opens the target page while Id & password matches*/
+            }
+            else {
+                alert("Error Password or Username")/*displays error message*/
+            }
+        }
+    </script>
         <br>
         <div> Don't have an account?  </div>
         <a href="SignUp.html">Sign up here </a>
