@@ -108,6 +108,9 @@ width:150px;
     background-color: #b4b4b4;
 }
 
+.button2:active{
+    background-color: #b4b4b4;
+}
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
