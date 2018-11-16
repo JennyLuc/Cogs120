@@ -1,11 +1,6 @@
 <html>
     <head>
 
-
-
-
-
-
          <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,6 +34,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger portfolio-item d-block" href="#portfolio-modal-1">Add Activity
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                  </a>
+              </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
             </li>
@@ -47,6 +49,7 @@
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Login.html">Logout</a>
+              <li class="nav-item mx-0 mx-lg-1">
             </li>
           </ul>
         </div>
@@ -62,11 +65,39 @@
         </h1>
                 <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
 
-        <p>List of Active Activities</p>
-        <p>List of Inactive Activities</p>
+        <h3>List of Inactive Activities</h3>
+        <a class="button2" href = "Setting.html">Edit Profile</a>
         </center>
 
+        <div class="portfolio-modal mfp-hide hello" id="Activity-1-Modal">
+            <div class="portfolio-modal-dialog bg-white">
+                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-3x fa-times"></i>
+                </a>
+                <div class="container text-center">
+                    <div class="row">
 
+                    <!--- Content of Modal--->
+
+                    <div class="col-lg-8 mx-auto">
+                      <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+                      <hr class="star-dark mb-5">
+                      <img class="img-fluid mb-5" src="add_image.png" alt="">
+                    <!-- Need to add padding to each of these elements in the modal -->
+                    <h3>Name of New Activity</h3>
+                    <div class="ui input">
+                      <input type="text" placeholder="New Activity">
+                    </div>
+                    <h3> Why I wanted to start this activity?</h3>
+                    <div class="ui input">
+                      <input type="text" placeholder="Why....">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
 
 
 
