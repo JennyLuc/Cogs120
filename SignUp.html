@@ -18,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.css" rel="stylesheet">
+    <!--<link href="css/semantic.css" rel="stylesheet"> -->
 
 </head>
 
@@ -28,7 +29,7 @@
         id="mainNav">
 
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
+          <a class="navbar-brand js-scroll-trigger" href="Login.html">UpTo</a>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
             </ul>
@@ -42,5 +43,35 @@
         <h1>
             Sign Up
         </h1>
+        <br>
+        <br>
+        <form name = "signup">
+            <input type="text" name="name" placeholder="First name">
+            &nbsp;&nbsp;
+            <input type="text" name="email" placeholder="Email">
+            <br>
+            <br>
+            <input type="text" name="user" placeholder="Username">
+            &nbsp;&nbsp;
+            <input type="password" name ="password" placeholder="Password">
+
+            <br>
+            <br>
+            <!--<input class="button" onclick="check_filled(this.form)" value="Sign Up"/ > -->
+            <a class = "button" href = "index.html">Sign Up</a>
+            <a class = "button1" href = "Login.html">Back</a>
+        </form>
+
+        <script language="javascript">
+            function check_filled(form) { /*function to check all inputs are filled*/
+
+                if !(form.name.value == null && form.email.value == null && form.user.value == null && form.password.value == null) {
+                    window.open('index.html')/*opens the target page */
+                }
+                else {
+                    alert("Please Fill All Required Field")/*displays error message*/
+                }
+            }
+        </script>
 </body>
 </html>
