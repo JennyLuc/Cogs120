@@ -80,25 +80,35 @@
 
 
 //OUR JAVASCRIPT
-  $(document).ready(function() {
+$(function newaaa(a, b) {
+
+
     console.log('hello world');
 
 
 
-  var hellooo = {'name': 'hi', 'description': 'hello'}
+  var hellooo = {'name': a, 'description': b};
+
+
   // compile the template
   var source   = $("#entry-template").html();
   var template = Handlebars.compile(source);
 
   var parentDiv = $("#templatedProjects");
 
-  // BEGIN - STEP 1
+
 
   // start with a simple template
   var html = template(hellooo);
   console.log(html);
   parentDiv.append(html);
 });
+
+
+
+
+
+
 
 
 
