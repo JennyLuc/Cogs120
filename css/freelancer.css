@@ -33,7 +33,7 @@ input-form{
     background-color: #008CBA; /* Blue */
     border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -74,8 +74,7 @@ width:150px;
 
 }
 
-.button,
-.button2:hover {
+.button:hover {
     background-color: #ffffff;
     color: #008CBA;
     border: 1px solid #008CBA
@@ -85,6 +84,12 @@ width:150px;
     background-color: #ffffff;
     color: #FC4A1A;
     border: 1px solid #FC4A1A
+}
+
+.button2:hover {
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
 }
 
 .button:link{
