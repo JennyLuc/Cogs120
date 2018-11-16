@@ -57,15 +57,15 @@
 
             <br>
             <br>
-            <!--<input class="button" onclick="check_filled(this.form)" value="Sign Up"/ > -->
-            <a class = "button" href = "index.html">Sign Up</a>
+            <input class="button" onclick="check_filled(this.form)" value="Sign Up"/ >
+            <!--<a class = "button" href = "index.html">Sign Up</a>-->
             <a class = "button1" href = "Login.html">Back</a>
         </form>
 
         <script language="javascript">
             function check_filled(form) { /*function to check all inputs are filled*/
 
-                if !(form.name.value == null && form.email.value == null && form.user.value == null && form.password.value == null) {
+                if (!(form.name.value == "" && form.email.value == "" && form.user.value == "" && form.password.value == "")) {
                     window.open('index.html')/*opens the target page */
                 }
                 else {
