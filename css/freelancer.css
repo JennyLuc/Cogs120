@@ -38,7 +38,7 @@ input-form{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 8px ;
     height:40px;
     width:100px;
 
@@ -69,7 +69,7 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 border-radius: 8px;
-height:40px;
+height:60px;
 width:150px;
 
 }
