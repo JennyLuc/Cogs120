@@ -38,7 +38,7 @@ input-form{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 8px ;
     height:40px;
     width:100px;
 
@@ -69,7 +69,7 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 border-radius: 8px;
-height:40px;
+height:60px;
 width:150px;
 
 }
@@ -108,6 +108,9 @@ width:150px;
     background-color: #b4b4b4;
 }
 
+.button2:active{
+    background-color: #b4b4b4;
+}
 hr.star-light,
 hr.star-dark {
   max-width: 15rem;
