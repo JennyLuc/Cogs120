@@ -14,42 +14,6 @@
       }
     }
   });
-  $("#saveInSetting").click(function()
-  {
-      alert("here");
-      var inputUser = (form.user.value);
-      var inputPassword = (form.password.value);
-      var inputEmail = (form.email.value);
-      var inputName = (form.name.value);
-
-      if (inputUser)
-      {
-          localStorage.setItem('username', JSON.stringify(inputUser));
-
-      }
-
-      if (inputName)
-      {
-          localStorage.setItem('name', JSON.stringify(inputName));
-
-          nameChange();
-
-      }
-
-      if(inputPassword)
-      {
-          localStorage.setItem('password', JSON.stringify(inputPassword));
-
-      }
-
-      if(inputEmail)
-      {
-        localStorage.setItem('email', JSON.stringify(inputEmail));
-
-
-      }
-      window.location  = "index.html";
-   }
 
    function nameChange()
    {
