@@ -49,7 +49,7 @@
 
       }
       window.location  = "index.html";
-   }
+   })
 
    function nameChange()
    {
