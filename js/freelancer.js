@@ -88,8 +88,6 @@ $('#save_button').click(createNew);
 //After clicking on id='#save_button', creates and runs function createNew
 function createNew(){
 
-
-
   //creates variable 'name' from 'new_activity_name'(id of the an input)
   var name = document.getElementById("new_activity_name");
   //creates localStorage piece called 'new_activity_name' from 'name'
@@ -99,17 +97,12 @@ function createNew(){
   localStorage.setItem("new_activity_why", why.value);
 
 
-
   //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
   //to properly add to handlbars template (below)
   var new_activity = {
     activity_name: localStorage.getItem('new_activity_name'),
     activity_why: localStorage.getItem('new_activity_why')
   }
-
-
-
-
 
 
  // compile the template
@@ -122,10 +115,44 @@ function createNew(){
   var html = template(new_activity);
   console.log(html);
   parentDiv.append(html);
-
 }
 
 
+
+
+
+
+
+
+$('#signup_button').click(createUser);
+//After clicking on id='#save_button', creates and runs function createNew
+function createUser(){
+
+ var name = document.getElementById("first_name");
+  localStorage.setItem("first_name", name.value);
+
+   var email = document.getElementById("email");
+  localStorage.setItem("email", email.value);
+
+
+   var user = document.getElementById("username");
+  localStorage.setItem("username", user.value);
+
+
+   var password = document.getElementById("password");
+  localStorage.setItem("password", password.value);
+
+
+
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
+  //to properly add to handlbars template (below)
+  var new_user = {
+    first_name: localStorage.getItem('first_name'),
+    email: localStorage.getItem('email'),
+    user: localStorage.getItem('username'),
+    password: localStorage.getItem('password')
+  }
+}
 
 
 
