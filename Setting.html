@@ -58,29 +58,70 @@
         <h1>
             Setting
         </h1>
-
+    <form name = "settingChanges"
         <center>
+            Change name
+            <div class="input">
+                <input type="text" name = "name" placeholder="New Name...">
+            </div>
+            <br>
             Change username
             <div class="input">
-                <input type="text" placeholder="New Username...">
+                <input type="text"  name = "user" placeholder="New Username...">
             </div>
             <br>
             Change Password
             <div class="input">
-                <input type="text" placeholder="New Password...">
+                <input type="text" name = "password" placeholder="New Password...">
             </div>
             <br>
             Change Email
             <div class="input">
-                <input type="text" placeholder="New Email...">
+                <input type="text" name = "email" placeholder="New Email...">
             </div>
             <br>
 
-            <a class="button" href="index.html">Save</a>
+            <input class="button" onclick="saving(this.form)" value="Save"/ >
             <a class="button1" href="index.html">Back</a>
 
 
         </center>
+    </form>
+        <script type="text/javascript">
+
+          function saving(form)
+          {
+              alert("here");
+              var inputUser = (form.user.value);
+              var inputPassword = (form.password.value);
+              var inputEmail = (form.email.value);
+              var inputName = (form.name.value);
+
+              if (inputUser)
+              {
+                  localStorage.setItem('username', JSON.stringify(inputUser));
+              }
+
+              if (inputName)
+              {
+                  localStorage.setItem('name', JSON.stringify(inputName));
+              }
+
+              if(inputPassword)
+              {
+                  localStorage.setItem('password', JSON.stringify(inputPassword));
+              }
+
+              if(inputEmail)
+              {
+                localStorage.setItem('email', JSON.stringify(inputEmail));
+              }
+              window.location  = "index.html";
+           }
+
+
+        </script>
 
 </body>
+
 </html>

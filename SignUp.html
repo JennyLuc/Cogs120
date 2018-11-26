@@ -46,14 +46,18 @@
         <br>
         <br>
         <form name = "signup">
-            <input type="text" name="name" placeholder="First name" id="first_name">
             &nbsp;&nbsp;
-            <input type="text" name="email" placeholder="Email" id="email">
             <br>
             <br>
-            <input type="text" name="user" placeholder="Username" id="username">
             &nbsp;&nbsp;
-            <input type="password" name ="password" placeholder="Password" id="password">
+            <input type="text" name="name" placeholder="First name" id = "nameSignup">
+            &nbsp;&nbsp;
+            <input type="text" name="email" placeholder="Email" id="emailSignup">
+            <br>
+            <br>
+            <input type="text" name="user" placeholder="Username" id="userSignup">
+            &nbsp;&nbsp;
+            <input type="password" name ="password" placeholder="Password" id="passwordSignup">
 
             <br>
             <br>
@@ -81,16 +85,26 @@
 
         <script language="javascript">
             function check_filled(form) { /*function to check all inputs are filled*/
+                var username = (form.user.value);
+                var password = (form.password.value);
+                var email = (form.email.value);
+                var name = (form.name.value);
 
-                if (!(form.name.value == "" && form.email.value == "" && form.user.value == "" && form.password.value == "")) {
+                if ((username && password && email && name )) {
+                    localStorage.setItem('name', JSON.stringify(name));
+                    localStorage.setItem('username', JSON.stringify(username));
+                    localStorage.setItem('password', JSON.stringify(password));
+                    localStorage.setItem('email', JSON.stringify(email));
                     window.open('index.html')/*opens the target page */
                 }
                 else {
                     alert("Please Fill All Required Field")/*displays error message*/
                 }
+
             }
         </script>
 
 
     </body>
+
 </html>
