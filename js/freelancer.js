@@ -72,6 +72,7 @@
     });
   });
 
+})(jQuery); // End of use strict
 
 
 
@@ -79,38 +80,52 @@
 
 
 
-//OUR JAVASCRIPT
-$(function newaaa(a, b) {
-
-
-    console.log('hello world');
 
 
 
-  var hellooo = {'name': a, 'description': b};
+
+$('#save_button').click(createNew);
+//After clicking on id='#save_button', creates and runs function createNew
+function createNew(){
 
 
-  // compile the template
-  var source   = $("#entry-template").html();
+
+  //creates variable 'name' from 'new_activity_name'(id of the an input)
+  var name = document.getElementById("new_activity_name");
+  //creates localStorage piece called 'new_activity_name' from 'name'
+  localStorage.setItem("new_activity_name", name.value);
+  //same^
+  var why = document.getElementById("new_activity_why");
+  localStorage.setItem("new_activity_why", why.value);
+
+
+
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
+  //to properly add to handlbars template (below)
+  var new_activity = {
+    activity_name: localStorage.getItem('new_activity_name'),
+    activity_why: localStorage.getItem('new_activity_why')
+  }
+
+
+
+
+
+
+ // compile the template
+  var source  = $("#entry-template").html();
   var template = Handlebars.compile(source);
-
   var parentDiv = $("#templatedProjects");
 
 
-
   // start with a simple template
-  var html = template(hellooo);
+  var html = template(new_activity);
   console.log(html);
   parentDiv.append(html);
-});
+
+}
 
 
 
 
 
-
-
-
-
-
-})(jQuery); // End of use strict

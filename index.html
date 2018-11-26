@@ -147,7 +147,7 @@
             <a style="font-size:300%" display="inline-block">{{activity_name}}</a>
           </li>
           <li>
-            <a style="font-size:150%" display="inline-block">{{activity_description}}</a>
+            <a style="font-size:150%" display="inline-block">{{activity_why}}</a>
             <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block" href="Setting.html">  •   •   •  </a>
           </li>
           <li>
@@ -161,49 +161,9 @@
 
 
 
-<div class="input"> Add New Activity
-  <input type="text" placeholder="New Activity Name" id="aa">
-</div> &nbsp;&nbsp;
-<div class="input"> Description
-  <input type="text" placeholder="New Description" id="bb">
-</div>
-<br>
-<br>&nbsp;&nbsp;
-<!--Activity Name: <input type="text" ><br>
-Description: <input type="text" id="bb"><br><br> -->
 
-<a class ="button2" onclick="myFunction(aa, bb)">Add New Activity</a>
-
-
-<script>
-function myFunction(aa , bb) {
-    var hellooo = {'name': aa, 'description': bb}
-    hellooo.name = aa;
-    hellooo.description = bb;
-  // compile the template
-  var source   = $("#entry-template").html();
-  var template = Handlebars.compile(source);
-
-  var parentDiv = $("#templatedProjects");
-
-  // BEGIN - STEP 1
-
-  // start with a simple template
-  var html = template(hellooo);
-  parentDiv.append(html);
-}
-</script>
-
-
-
-
-
-
-
-
-
+<!-- Empty because this is where new activity templates go -->
   <div id="templatedProjects" class="col-md-12 col-lg-12">
-
 
   </div>
 
@@ -226,6 +186,11 @@ function myFunction(aa , bb) {
                 --->
 
 
+
+
+
+
+
               <!-- Activity Button -->
               <a class="portfolio-item d-block" href="#portfolio-modal-1">
                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
@@ -242,86 +207,61 @@ function myFunction(aa , bb) {
 
 
 
-    <!---new Activity Modal --->
-    <div class="portfolio-modal mfp-hide hello" id="Activity-1-Modal">
+
+
+      <!-- Portfolio Modal 1 -->
+      <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
         <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                <i class="fa fa-3x fa-times"></i>
-            </a>
-            <div class="container text-center">
-                <div class="row">
+          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+          </a>
+          <div class="container text-center">
+            <div class="row">
 
-                <!--- Content of Modal--->
 
-                <div class="col-lg-8 mx-auto">
-                  <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
-                  <hr class="star-dark mb-5">
-                  <img class="img-fluid mb-5" src="add_image.png" alt="">
-                <!-- Need to add padding to each of these elements in the modal -->
+              <!-- Content of modal -->
+              <div class="col-lg-8 mx-auto">
+                <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+                <hr class="star-dark mb-5">
+                <img class="img-fluid mb-5" src="add_image.png" alt="">
+
+                <!-- Need to add padding to each of these elements in the modal  -John -->
                 <h3>Name of New Activity</h3>
                 <div class="ui input">
-                  <input type="text" placeholder="New Activity">
+                  <input type="text" placeholder="New Activity" id="new_activity_name">
                 </div>
                 <h3> Why I wanted to start this activity?</h3>
                 <div class="ui input">
-                  <input type="text" placeholder="Why....">
+                  <input type="text" placeholder="Why...." id="new_activity_why">
                 </div>
                 <br>
-                <a class="button1 portfolio-modal-dismiss" href="#">
+
+                <a class="button portfolio-modal-dismiss" href="#" id="save_button">
                   <i class="fa fa-close"></i>
-                Close </a>
+                Save </a>
 
                 <!-- need the button to close -->
                 <a class="button1 portfolio-modal-dismiss" href="#">
                   <i class="fa fa-close"></i>
                 Close </a>
-            </div>
-        </div>
-    </div>
-
-</div>
-</div>
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
 
 
-            <!-- Content of modal -->
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="add_image.png" alt="">
-
-              <!-- Need to add padding to each of these elements in the modal  -John -->
-              <h3>Name of New Activity</h3>
-              <div class="ui input">
-                <input type="text" placeholder="New Activity">
               </div>
-              <h3> Why I wanted to start this activity?</h3>
-              <div class="ui input">
-                <input type="text" placeholder="Why....">
-              </div>
-              <br>
-
-              <a class="button portfolio-modal-dismiss" href="#" onclick="myFunction(aa, bb)">
-                <i class="fa fa-close"></i>
-              Save </a>
-
-              <!-- need the button to close -->
-              <a class="button1 portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-              Close </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -494,6 +434,13 @@ function myFunction(aa , bb) {
 
 
 
+
+
+
+
+
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -507,10 +454,10 @@ function myFunction(aa , bb) {
     <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
+    <script src="js/handlebars-v4.0.11.js"></script>
     <script src="js/freelancer.js"></script>
 
 
-    <script src="js/handlebars-v4.0.11.js"></script>
 
 
   </body>
