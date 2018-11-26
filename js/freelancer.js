@@ -14,6 +14,69 @@
       }
     }
   });
+  $("#saveInSetting").click(function()
+  {
+      alert("here");
+      var inputUser = (form.user.value);
+      var inputPassword = (form.password.value);
+      var inputEmail = (form.email.value);
+      var inputName = (form.name.value);
+
+      if (inputUser)
+      {
+          localStorage.setItem('username', JSON.stringify(inputUser));
+
+      }
+
+      if (inputName)
+      {
+          localStorage.setItem('name', JSON.stringify(inputName));
+
+          nameChange();
+
+      }
+
+      if(inputPassword)
+      {
+          localStorage.setItem('password', JSON.stringify(inputPassword));
+
+      }
+
+      if(inputEmail)
+      {
+        localStorage.setItem('email', JSON.stringify(inputEmail));
+
+
+      }
+      window.location  = "index.html";
+   }
+
+   function nameChange()
+   {
+       var changedName = localStorage.getItem('name');
+       document.getElementById("myName").innerHTML = localStorage.getItem("name") + "'s Activities";
+   }
+  $("#saveInSetting").click(function()
+  {
+      alert ("hello");
+      var username = (document.getElementById('userSetting').value);
+      var password = (document.getElementById('passwordSetting').value);
+      var email = (document.getElementById('emailSetting').value);
+      var name = (document.getElementById('nameSetting').value);
+
+      if (username && password && email && name)
+      {
+          localStorage.setItem('username', JSON.stringify(name));
+          localStorage.setItem('username', JSON.stringify(username));
+          localStorage.setItem('password', JSON.stringify(password));
+          localStorage.setItem('password', JSON.stringify(email));
+      }else
+      {
+          alert("Please complete input in all fields");
+      }
+
+
+  });
 
   // Scroll to top button appear
   $(document).scroll(function() {
@@ -100,7 +163,7 @@ function createNew(){
 
 
 
-  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
   //to properly add to handlbars template (below)
   var new_activity = {
     activity_name: localStorage.getItem('new_activity_name'),
@@ -124,8 +187,3 @@ function createNew(){
   parentDiv.append(html);
 
 }
-
-
-
-
-
