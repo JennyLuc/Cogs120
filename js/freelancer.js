@@ -160,33 +160,31 @@ function createNew(){
 
 
   index = increment(); 
-
-
   localStorage.setItem("index", Number(index));
 
+
+
   //creates variable 'name' from 'new_activity_name'(id of the an input)
-  var name = document.getElementById("new_activity_name");
-  //creates localStorage piece called 'new_activity_name' from 'name'
-  localStorage.setItem("new_activity_name", name.value);
-  //same^
-  var why = document.getElementById("new_activity_why");
-  localStorage.setItem("new_activity_why", why.value);
+    //creates localStorage piece called 'new_activity_name' from 'name'
+    var name = document.getElementById("new_activity_name");
+    localStorage.setItem("new_activity_name", name.value);
 
-
-  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
-
-  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-  //to properly add to handlbars template (below)
-  var new_activity = {
-    activity_name: localStorage.getItem('new_activity_name'),
-    activity_why: localStorage.getItem('new_activity_why'),
-    index: Number(localStorage.getItem('index'))
-  }
+    var why = document.getElementById("new_activity_why");
+    localStorage.setItem("new_activity_why", why.value);
 
 
 
 
-  var activity_list = JSON.parse(localStorage.getItem('list')) || [];
+
+    var new_activity = {
+      activity_name: localStorage.getItem('new_activity_name'),
+      activity_why: localStorage.getItem('new_activity_why'),
+      index: Number(localStorage.getItem('index'))
+    }
+
+
+
+    var activity_list = JSON.parse(localStorage.getItem('list')) || [];
     // add to it,
     activity_list.push({
       activity_name: localStorage.getItem('new_activity_name'),
@@ -197,21 +195,11 @@ function createNew(){
     localStorage.setItem('list', JSON.stringify(activity_list));
 
 
-// Put the object into storage
-//localStorage.setItem('new_activity_index', JSON.stringify(new_activity));
-
-// Retrieve the object from storage
-//var retrievedObject = localStorage.getItem('testObject');
-
-//console.log('retrievedObject: ', JSON.parse(retrievedObject));
-
-
-
 
  // compile the template
-  var source  = $("#entry-template").html();
-  var template = Handlebars.compile(source);
-  var parentDiv = $("#templatedProjects");
+ var source  = $("#entry-template").html();
+ var template = Handlebars.compile(source);
+ var parentDiv = $("#templatedProjects");
 
 
   // start with a simple template
@@ -219,9 +207,7 @@ function createNew(){
   console.log(html);
   parentDiv.append(html);
 
-
 }
-
 
 
 
