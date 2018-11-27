@@ -51,6 +51,7 @@
       window.location  = "index.html";
    })
 
+
    function nameChange()
    {
        var changedName = localStorage.getItem('name');
@@ -151,6 +152,9 @@ $('#save_button').click(createNew);
 //After clicking on id='#save_button', creates and runs function createNew
 function createNew(){
 
+  
+
+ 
   //creates variable 'name' from 'new_activity_name'(id of the an input)
   var name = document.getElementById("new_activity_name");
   //creates localStorage piece called 'new_activity_name' from 'name'
@@ -180,6 +184,7 @@ function createNew(){
   var html = template(new_activity);
   console.log(html);
   parentDiv.append(html);
+
 }
 
 
