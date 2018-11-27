@@ -159,10 +159,6 @@ $('#save_button').click(createNew);
 function createNew(){
 
 
-  index = increment(); 
-  localStorage.setItem("index", Number(index));
-
-
 
   //creates variable 'name' from 'new_activity_name'(id of the an input)
     //creates localStorage piece called 'new_activity_name' from 'name'
@@ -178,8 +174,7 @@ function createNew(){
 
     var new_activity = {
       activity_name: localStorage.getItem('new_activity_name'),
-      activity_why: localStorage.getItem('new_activity_why'),
-      index: Number(localStorage.getItem('index'))
+      activity_why: localStorage.getItem('new_activity_why')
     }
 
 
@@ -189,7 +184,6 @@ function createNew(){
     activity_list.push({
       activity_name: localStorage.getItem('new_activity_name'),
       activity_why: localStorage.getItem('new_activity_why'),
-      index: Number(localStorage.getItem('index'))
     });
     // then put it back.
     localStorage.setItem('list', JSON.stringify(activity_list));
@@ -210,6 +204,21 @@ function createNew(){
 
 
 
+
+
+$(document).ready(function(){
+
+  list = JSON.parse(localStorage.getItem('list'))
+
+  for (i=0; i++; i<list.length) {
+    var source  = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    var parentDiv = $("#savedProjects");
+    var html = template(list[i]);
+    console.log(html);
+    parentDiv.append(html);
+  }
+})
 
 
 
