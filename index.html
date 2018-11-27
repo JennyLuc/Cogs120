@@ -77,11 +77,14 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
 
+
       <h2 class="text-center text-uppercase text-secondary mb-0" name = "hello" id = "myName">  Name's Activities</h2>
       <!-- changing the name of the header -->
       <script type = "text/javascript">
-        var changedName = JSON.parse(localStorage.getItem('name'));
-        document.getElementById("myName").innerHTML = changedName + "'s Activities";
+
+      var changedName = JSON.parse(localStorage.getItem('name'));
+      document.getElementById("myName").innerHTML = changedName + "'s Activities";
+
       </script>
 
       <hr class="star-dark mb-5">

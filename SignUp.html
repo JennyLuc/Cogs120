@@ -29,7 +29,7 @@
         id="mainNav">
 
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="Login.html">UpTo</a>
+          <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
             </ul>
@@ -46,6 +46,10 @@
         <br>
         <br>
         <form name = "signup">
+            &nbsp;&nbsp;
+            <br>
+            <br>
+            &nbsp;&nbsp;
             <input type="text" name="name" placeholder="First name" id = "nameSignup">
             &nbsp;&nbsp;
             <input type="text" name="email" placeholder="Email" id="emailSignup">
@@ -57,10 +61,27 @@
 
             <br>
             <br>
-            <input class="button" onclick="check_filled(this.form)" value="Sign Up"/ >
-            <!--<a class = "button" href = "index.html">Sign Up</a>-->
+            <a class = "button" href = "index.html" id="signup_button" onclick="check_filled(this.form)">Sign Up </a>
             <a class = "button1" href = "Login.html">Back</a>
         </form>
+
+
+
+ <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/handlebars-v4.0.11.js"></script>
+    <script src="js/freelancer.js"></script>
 
         <script language="javascript">
             function check_filled(form) { /*function to check all inputs are filled*/
@@ -83,5 +104,7 @@
             }
         </script>
 
-</body>
+
+    </body>
+
 </html>

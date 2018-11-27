@@ -14,6 +14,43 @@
       }
     }
   });
+  $("#saveInSetting").click(function()
+  {
+      alert("here");
+      var inputUser = (form.user.value);
+      var inputPassword = (form.password.value);
+      var inputEmail = (form.email.value);
+      var inputName = (form.name.value);
+
+      if (inputUser)
+      {
+          localStorage.setItem('username', JSON.stringify(inputUser));
+
+      }
+
+      if (inputName)
+      {
+          localStorage.setItem('name', JSON.stringify(inputName));
+
+          nameChange();
+
+      }
+
+      if(inputPassword)
+      {
+          localStorage.setItem('password', JSON.stringify(inputPassword));
+
+      }
+
+      if(inputEmail)
+      {
+        localStorage.setItem('email', JSON.stringify(inputEmail));
+
+
+      }
+      window.location  = "index.html";
+   })
+
 
    function nameChange()
    {
@@ -105,6 +142,12 @@
 
 
 
+var hello = 0;
+
+function increment(){
+  hello++;
+  return hello;
+}
 
 
 
@@ -115,70 +158,105 @@ $('#save_button').click(createNew);
 //After clicking on id='#save_button', creates and runs function createNew
 function createNew(){
 
-    //creates variable 'name' from 'new_activity_name'(id of the an input)
-    var name = document.getElementById("new_activity_name");
-    //creates localStorage piece called 'new_activity_name' from 'name'
-    localStorage.setItem("new_activity_name", name.value);
-    //same^
-    var why = document.getElementById("new_activity_why");
-    localStorage.setItem("new_activity_why", why.value);
+
+  index = increment(); 
 
 
+  localStorage.setItem("index", Number(index));
 
-    //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-    //to properly add to handlbars template (below)
-    var new_activity = {
+  //creates variable 'name' from 'new_activity_name'(id of the an input)
+  var name = document.getElementById("new_activity_name");
+  //creates localStorage piece called 'new_activity_name' from 'name'
+  localStorage.setItem("new_activity_name", name.value);
+  //same^
+  var why = document.getElementById("new_activity_why");
+  localStorage.setItem("new_activity_why", why.value);
+
+
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
+
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
+  //to properly add to handlbars template (below)
+  var new_activity = {
     activity_name: localStorage.getItem('new_activity_name'),
-    activity_why: localStorage.getItem('new_activity_why')
+    activity_why: localStorage.getItem('new_activity_why'),
+    index: Number(localStorage.getItem('index'))
   }
 
-    // compile the template
-    var source  = $("#entry-template").html();
-    var popUp  = $("#popup-information").html();
-    var template = Handlebars.compile(source);
-    var template2 = Handlebars.compile(popUp);
-    var parentDiv = $("#templatedProjects");
 
 
-    // start with a simple template
-    var html = template(new_activity);
-    console.log(html);
-    parentDiv.append(html);
+
+  var activity_list = JSON.parse(localStorage.getItem('list')) || [];
+    // add to it,
+    activity_list.push({
+      activity_name: localStorage.getItem('new_activity_name'),
+      activity_why: localStorage.getItem('new_activity_why'),
+      index: Number(localStorage.getItem('index'))
+    });
+    // then put it back.
+    localStorage.setItem('list', JSON.stringify(activity_list));
+
+
+// Put the object into storage
+//localStorage.setItem('new_activity_index', JSON.stringify(new_activity));
+
+// Retrieve the object from storage
+//var retrievedObject = localStorage.getItem('testObject');
+
+//console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+
+
+
+ // compile the template
+  var source  = $("#entry-template").html();
+  var template = Handlebars.compile(source);
+  var parentDiv = $("#templatedProjects");
+
+
+  // start with a simple template
+  var html = template(new_activity);
+  console.log(html);
+  parentDiv.append(html);
+
 
 }
 
-$('#add-activity-nav').click(createNew);
+
+
+
+
+
+
+
+$('#signup_button').click(createUser);
 //After clicking on id='#save_button', creates and runs function createNew
-function createNew(){
+function createUser(){
 
-    //creates variable 'name' from 'new_activity_name'(id of the an input)
-    var name = document.getElementById("new_activity_name");
-    //creates localStorage piece called 'new_activity_name' from 'name'
-    localStorage.setItem("new_activity_name", name.value);
-    //same^
-    var why = document.getElementById("new_activity_why");
-    localStorage.setItem("new_activity_why", why.value);
+ var name = document.getElementById("first_name");
+  localStorage.setItem("first_name", name.value);
+
+   var email = document.getElementById("email");
+  localStorage.setItem("email", email.value);
 
 
+   var user = document.getElementById("username");
+  localStorage.setItem("username", user.value);
 
-    //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-    //to properly add to handlbars template (below)
-    var new_activity = {
-    activity_name: localStorage.getItem('new_activity_name'),
-    activity_why: localStorage.getItem('new_activity_why')
+
+   var password = document.getElementById("password");
+  localStorage.setItem("password", password.value);
+
+
+
+  //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why' 
+  //to properly add to handlbars template (below)
+  var new_user = {
+    first_name: localStorage.getItem('first_name'),
+    email: localStorage.getItem('email'),
+    user: localStorage.getItem('username'),
+    password: localStorage.getItem('password')
   }
-
-    // compile the template
-    var source  = $("#entry-template").html();
-    var popUp  = $("#popup-information").html();
-    var template = Handlebars.compile(source);
-    var template2 = Handlebars.compile(popUp);
-    var parentDiv = $("#templatedProjects");
-
-
-    // start with a simple template
-    var html = template(new_activity);
-    console.log(html);
-    parentDiv.append(html);
-
 }
+
+
