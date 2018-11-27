@@ -142,6 +142,12 @@
 
 
 
+var hello = 0;
+
+function increment(){
+  hello++;
+  return hello;
+}
 
 
 
@@ -152,10 +158,12 @@ $('#save_button').click(createNew);
 //After clicking on id='#save_button', creates and runs function createNew
 function createNew(){
 
-<<<<<<< HEAD
-  
 
- 
+  index = increment(); 
+
+
+  localStorage.setItem("index", Number(index));
+
   //creates variable 'name' from 'new_activity_name'(id of the an input)
   var name = document.getElementById("new_activity_name");
   //creates localStorage piece called 'new_activity_name' from 'name'
@@ -170,80 +178,47 @@ function createNew(){
   //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
   //to properly add to handlbars template (below)
   var new_activity = {
-=======
-    //creates variable 'name' from 'new_activity_name'(id of the an input)
-    var name = document.getElementById("new_activity_name");
-    //creates localStorage piece called 'new_activity_name' from 'name'
-    localStorage.setItem("new_activity_name", name.value);
-    //same^
-    var why = document.getElementById("new_activity_why");
-    localStorage.setItem("new_activity_why", why.value);
-
-
-
-    //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-    //to properly add to handlbars template (below)
-    var new_activity = {
->>>>>>> 36f4f9189e91ce413ae28ab49536e1682cb21b98
     activity_name: localStorage.getItem('new_activity_name'),
-    activity_why: localStorage.getItem('new_activity_why')
+    activity_why: localStorage.getItem('new_activity_why'),
+    index: Number(localStorage.getItem('index'))
   }
 
-    // compile the template
-    var source  = $("#entry-template").html();
-    var popUp  = $("#popup-information").html();
-    var template = Handlebars.compile(source);
-    var template2 = Handlebars.compile(popUp);
-    var parentDiv = $("#templatedProjects");
 
 
-    // start with a simple template
-    var html = template(new_activity);
-    console.log(html);
-    parentDiv.append(html);
 
-}
+  var activity_list = JSON.parse(localStorage.getItem('list')) || [];
+    // add to it,
+    activity_list.push({
+      activity_name: localStorage.getItem('new_activity_name'),
+      activity_why: localStorage.getItem('new_activity_why'),
+      index: Number(localStorage.getItem('index'))
+    });
+    // then put it back.
+    localStorage.setItem('list', JSON.stringify(activity_list));
 
-$('#add-activity-nav').click(createNew);
-//After clicking on id='#save_button', creates and runs function createNew
-function createNew(){
 
-<<<<<<< HEAD
+// Put the object into storage
+//localStorage.setItem('new_activity_index', JSON.stringify(new_activity));
+
+// Retrieve the object from storage
+//var retrievedObject = localStorage.getItem('testObject');
+
+//console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+
+
+
  // compile the template
   var source  = $("#entry-template").html();
   var template = Handlebars.compile(source);
   var parentDiv = $("#templatedProjects");
-=======
-    //creates variable 'name' from 'new_activity_name'(id of the an input)
-    var name = document.getElementById("new_activity_name");
-    //creates localStorage piece called 'new_activity_name' from 'name'
-    localStorage.setItem("new_activity_name", name.value);
-    //same^
-    var why = document.getElementById("new_activity_why");
-    localStorage.setItem("new_activity_why", why.value);
 
 
+  // start with a simple template
+  var html = template(new_activity);
+  console.log(html);
+  parentDiv.append(html);
 
-    //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-    //to properly add to handlbars template (below)
-    var new_activity = {
-    activity_name: localStorage.getItem('new_activity_name'),
-    activity_why: localStorage.getItem('new_activity_why')
-  }
-
-    // compile the template
-    var source  = $("#entry-template").html();
-    var popUp  = $("#popup-information").html();
-    var template = Handlebars.compile(source);
-    var template2 = Handlebars.compile(popUp);
-    var parentDiv = $("#templatedProjects");
->>>>>>> 36f4f9189e91ce413ae28ab49536e1682cb21b98
-
-
-    // start with a simple template
-    var html = template(new_activity);
-    console.log(html);
-    parentDiv.append(html);
 
 }
 
