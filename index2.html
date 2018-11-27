@@ -44,6 +44,9 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
@@ -77,14 +80,11 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
 
-
       <h2 class="text-center text-uppercase text-secondary mb-0" name = "hello" id = "myName">  Name's Activities</h2>
       <!-- changing the name of the header -->
       <script type = "text/javascript">
-
-      var changedName = JSON.parse(localStorage.getItem('name'));
-      document.getElementById("myName").innerHTML = changedName + "'s Activities";
-
+        var changedName = JSON.parse(localStorage.getItem('name'));
+        document.getElementById("myName").innerHTML = changedName + "'s Activities";
       </script>
 
       <hr class="star-dark mb-5">

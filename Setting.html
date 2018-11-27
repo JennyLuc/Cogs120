@@ -1,4 +1,4 @@
-<html>
+
 <head>
   <title> Setting </title>
 
@@ -22,6 +22,154 @@
 </head>
 
 <body id="page-top">
+<<<<<<< HEAD
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+    style="padding-top: 0px; padding-bottom: 0px;"
+    id="mainNav">
+    <!-- This is what I edited^ -John-->
+
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+              </li>
+            <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
+          </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Login.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Add new activity template -->
+    <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+
+
+            <!-- Content of modal -->
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="add_image.png" alt="">
+
+              <!-- Need to add padding to each of these elements in the modal  -John -->
+              <h3>Name of New Activity</h3>
+              <div class="ui input">
+                <input type="text" placeholder="New Activity" id="new_activity_name">
+              </div>
+              <h3> Why I wanted to start this activity?</h3>
+              <div class="ui input">
+                <input type="text" placeholder="Why...." id="new_activity_why">
+              </div>
+              <br>
+
+              <a class="button portfolio-modal-dismiss" href="#" id="save_button">
+                <i class="fa fa-close"></i>
+              Save </a>
+
+              <!-- need the button to close -->
+              <a class="button1 portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+              Close </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <center>
+            <br>
+            <br>
+            <br>
+        <h1>
+            Setting
+        </h1>
+    <form name = "settingChanges">
+        <center>
+            Change name
+            <div class="input">
+                <input type="text" name = "name" placeholder="New Name...">
+            </div>
+            <br>
+            Change username
+            <div class="input">
+                <input type="text"  name = "user" placeholder="New Username...">
+            </div>
+            <br>
+            Change Password
+            <div class="input">
+                <input type="text" name = "password" placeholder="New Password...">
+            </div>
+            <br>
+            Change Email
+            <div class="input">
+                <input type="text" name = "email" placeholder="New Email...">
+            </div>
+            <br>
+
+            <input class="button" onclick="saving(this.form)" value="Save"/ >
+            <a class="button1" href="index.html">Back</a>
+
+
+        </center>
+    </form>
+        <script type="text/javascript">
+
+          function saving(form)
+          {
+              alert("here");
+              var inputUser = (form.user.value);
+              var inputPassword = (form.password.value);
+              var inputEmail = (form.email.value);
+              var inputName = (form.name.value);
+
+              if (inputUser)
+              {
+                  localStorage.setItem('username', JSON.stringify(inputUser));
+              }
+
+              if (inputName)
+              {
+                  localStorage.setItem('name', JSON.stringify(inputName));
+              }
+
+              if(inputPassword)
+              {
+                  localStorage.setItem('password', JSON.stringify(inputPassword));
+              }
+
+              if(inputEmail)
+              {
+                localStorage.setItem('email', JSON.stringify(inputEmail));
+              }
+              window.location  = "index.html";
+           }
+
+
+        </script>
+
+
+=======
 <<<<<<< HEAD
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
   style="padding-top: 0px; padding-bottom: 0px;"
@@ -121,6 +269,7 @@
       window.location  = "index.html";
     }
   </script>
+>>>>>>> 8f716fead831e72407d975a3893c6d330df95bfa
 
 </body>
 
