@@ -206,8 +206,12 @@ function createNew(){
   var html = template(new_activity);
   console.log(html);
   parentDiv.append(html);
-
 }
+
+
+
+
+
 
 
 
