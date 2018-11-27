@@ -74,10 +74,10 @@
                     localStorage.setItem('username', JSON.stringify(username));
                     localStorage.setItem('password', JSON.stringify(password));
                     localStorage.setItem('email', JSON.stringify(email));
-                    window.open('index.html')/*opens the target page */
+                    window.location  = "index.html";/*opens the target page */
                 }
                 else {
-                    alert("Please Fill All Required Field")/*displays error message*/
+                    alert("Please Fill All Required Field");/*displays error message*/
                 }
 
             }
