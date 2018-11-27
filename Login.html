@@ -70,8 +70,8 @@
             /*the following code checkes whether the entered userid and password are matching*/
             var inputName = form.userid.value;
             var inputPassword = form.pswrd.value;
-            alert ("username: " + JSON.parse(localStorage.getItem('username')) +" password: "+ JSON.parse(localStorage.getItem('password')));
-            alert ("you put in: "+ form.userid.value+"and for password: " + form.pswrd.value);
+            //alert ("username: " + JSON.parse(localStorage.getItem('username')) +" password: "+ JSON.parse(localStorage.getItem('password')));
+           // alert ("you put in: "+ form.userid.value+"and for password: " + form.pswrd.value);
             if(JSON.stringify(inputName) == localStorage.getItem('username') && JSON.stringify(inputPassword) == localStorage.getItem('password')) {
                 window.open('index.html')/*opens the target page while Id & password matches*/
             }

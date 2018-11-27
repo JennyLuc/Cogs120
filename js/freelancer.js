@@ -135,19 +135,7 @@
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
-
 })(jQuery); // End of use strict
-
-
-
-
-
-var hello = 0;
-
-function increment(){
-  hello++;
-  return hello;
-}
 
 
 
@@ -205,22 +193,21 @@ function createNew(){
 
 
 
-
 $(document).ready(function(){
 
   list = JSON.parse(localStorage.getItem('list'))
 
-  for (i=0; i++; i<list.length) {
-    var source  = $("#entry-template").html();
-    var template = Handlebars.compile(source);
-    var parentDiv = $("#savedProjects");
-    var html = template(list[i]);
+  var source  = $("#entry-template").html();
+  var template = Handlebars.compile(source);
+  var parentDiv = $("#savedProjects");
+
+
+  for (var i=0; i < list.length, i++;) {
+    var html = template(JSON.parse(localStorage.getItem('list'))[i]);
     console.log(html);
     parentDiv.append(html);
   }
 })
-
-
 
 
 
