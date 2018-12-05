@@ -126,15 +126,15 @@
   });
 
   // Floating label headings for the contact form
-    $(function() {
-        $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-            $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-        }).on("focus", ".floating-label-form-group", function() {
-            $(this).addClass("floating-label-form-group-with-focus");
-        }).on("blur", ".floating-label-form-group", function() {
-            $(this).removeClass("floating-label-form-group-with-focus");
-        });
+  $(function() {
+    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+      $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+    }).on("focus", ".floating-label-form-group", function() {
+      $(this).addClass("floating-label-form-group-with-focus");
+    }).on("blur", ".floating-label-form-group", function() {
+      $(this).removeClass("floating-label-form-group-with-focus");
     });
+  });
     // function myFunction(){
     //     alert("Page is loaded");
     // }
@@ -145,7 +145,7 @@
 
 
 
-    $('#save_button').click(createNew);
+$('#save_button').click(createNew);
     //After clicking on id='#save_button', creates and runs function createNew
     function createNew(){
 
@@ -159,23 +159,23 @@
         var why = document.getElementById("new_activity_why");
         localStorage.setItem("new_activity_why", why.value);
 
-        var day = document.getElementById("day");
-        localStorage.setItem("new_activity_day", day.value);
+        // var day = document.getElementById("day");
+        // localStorage.setItem("new_activity_day", day.value);
 
-        var time = document.getElementById("time");
-        localStorage.setItem("new_activity_time", time.value);
+        // var time = document.getElementById("time");
+        // localStorage.setItem("new_activity_time", time.value);
 
-        var noon = document.getElementById("noon");
-        localStorage.setItem("new_activity_noon", noon.value);
+        // var noon = document.getElementById("noon");
+        // localStorage.setItem("new_activity_noon", noon.value);
 
 
 
         var new_activity = {
-            activity_name: localStorage.getItem('new_activity_name'),
-            activity_why: localStorage.getItem('new_activity_why'),
-            activity_day: localStorage.getItem('new_activity_day'),
-            activity_time: localStorage.getItem('new_activity_time'),
-            activity_noon: localStorage.getItem('new_activity_noon')
+          activity_name: localStorage.getItem('new_activity_name'),
+          activity_why: localStorage.getItem('new_activity_why'),
+          // activity_day: localStorage.getItem('new_activity_day'),
+          // activity_time: localStorage.getItem('new_activity_time'),
+          // activity_noon: localStorage.getItem('new_activity_noon')
         }
 
 
@@ -183,9 +183,10 @@
         var activity_list = JSON.parse(localStorage.getItem('list')) || [];
         // add to it,
         activity_list.push({
-            activity_name: localStorage.getItem('new_activity_name'),
-            activity_why: localStorage.getItem('new_activity_why'),
+          activity_name: localStorage.getItem('new_activity_name'),
+          activity_why: localStorage.getItem('new_activity_why'),
         });
+        console.log(activity_list);
         // then put it back.
         localStorage.setItem('list', JSON.stringify(activity_list));
 
@@ -201,26 +202,29 @@
         var html = template(new_activity);
         console.log(html);
         parentDiv.append(html);
-    }
+      }
 
 
 
 
-    $(document).ready(function(){
 
-        list = JSON.parse(localStorage.getItem('list'))
+
+
+      $(document).ready(function(){
+
+        list = JSON.parse(localStorage.getItem('list'));
 
         var source  = $("#entry-template").html();
         var template = Handlebars.compile(source);
         var parentDiv = $("#savedProjects");
 
-
-        for (var i=0; i < list.length, i++;) {
-            var html = template(JSON.parse(localStorage.getItem('list'))[i]);
-            console.log(html);
-            parentDiv.append(html);
+        // console.log(JSON.parse(localStorage.getItem('list')).length);
+        for (var i=0; i < list.length; i++) {
+          var html = template(JSON.parse(localStorage.getItem('list'))[i]);
+          console.log(JSON.parse(localStorage.getItem('list'))[i]);
+          parentDiv.append(html);
         }
-    })
+      })
 
 
 
