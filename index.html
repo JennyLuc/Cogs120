@@ -202,7 +202,7 @@
           </div>
           <li>
             <img class="img-fluid" width="700" src="img/portfolio/cake.png" display="inline-block" alt="">
-            <a style="font-size:300%" display="inline-block">{{activity_name}}</a>
+            <a style="font-size:300%" display="inline-block" class="activity-name">{{activity_name}}</a>
           </li>
           <li>
             <a style="font-size:150%" display="inline-block">{{activity_why}}</a>
@@ -211,10 +211,24 @@
           <li>
             <img class="img-fluid" src="project_pic.png" width="720">
           </li>
+          <li onclick="remove(this)"> remove </li>
         </a>
       </ul>
     </row>
   </div>
+</script>
+
+<script>
+  function remove(element) {
+    // element.parentNode.parentNode.parentNode.remove();
+    // you would also need to remove it from the actual list in localStorage
+  }
+
+  // this is for editing:
+  // begin by modifying the actual list in localstorage
+  // element.parentNode.getElementsByClassName("activity-name")[0].innerHTML = "bla";
+  // bla would be replaced by say, data.activity_name
+  // ...where data is JSON.parse(localStorage.getItem('list'))[i]
 </script>
 
 <script id="popup-information" type="text/x-handlebars-template">

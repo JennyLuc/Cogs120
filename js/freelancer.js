@@ -219,9 +219,13 @@ $('#save_button').click(createNew);
         var parentDiv = $("#savedProjects");
 
         // console.log(JSON.parse(localStorage.getItem('list')).length);
+        console.log(list);
         for (var i=0; i < list.length; i++) {
-          var html = template(JSON.parse(localStorage.getItem('list'))[i]);
-          console.log(JSON.parse(localStorage.getItem('list'))[i]);
+          // TODO: check if there's another variable called data that can conflict
+          var data = JSON.parse(localStorage.getItem('list'))[i];
+          // console.log(data.activity_name);
+          var html = template(data);
+          // console.log(JSON.parse(localStorage.getItem('list'))[i]);
           parentDiv.append(html);
         }
       })
