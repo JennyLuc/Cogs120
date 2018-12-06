@@ -101,105 +101,17 @@
       <div class="row">
 
 
-<!--
-
-          <div class="col-md-12 col-lg-12">
-            <row>
-              <ul style="list-style:none">
-                <li>
-                  <img class="img-fluid" width="500" src="img/portfolio/cabin.png" display="inline-block" alt="">
-                  <a style="font-size:300%" display="inline-block"> NAME OF ACTIVITY #1</a>
-                </li>
-                <li>
-                  <a style="font-size:150%" display="inline-block"> Description of why the person <br>was inspired to start their activity</a>
-                  <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" href="Setting.html" display="inline-block">  •   •   • </a>
-                </li>
-                <li>
-                  <img class="img-fluid" src="project_pic.png" width="720">
-                </li>
-              </ul>
-            </row>
-          </div> -->
-
-          <!--- Activity #1 --->
-<!--
-          <div class="col-md-12 col-lg-12">
-            <row>
-              <ul style="list-style:none">
-
-                <a class="portfolio-item d-block" href="#activity-1-modal">
-                  <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                    <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                      <i class="fas fa-search-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <li>
-                    <img class="img-fluid" width="700" src="img/portfolio/cabin.png" display="inline-block" alt="">
-                    <a style="font-size:300%" display="inline-block"> NAME OF ACTIVITY #1</a>
-                  </li>
-                  <li>
-                    <a style="font-size:150%" display="inline-block"> Description of why the person <br>was inspired to start their activity</a>
-                    <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block" href="Setting.html">  •   •   • </a>
-                  </li>
-                  <li>
-                    <img class="img-fluid" src="project_pic.png" width="720">
-                  </li>
-                </a>
-              </ul>
-            </row>
-          </div>
-
-          <div class="portfolio-modal mfp-hide hello" id="activity-1-modal">
-            <div class="portfolio-modal-dialog bg-white">
-              <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                <i class="fa fa-3x fa-times"></i>
-              </a>
-              <div class="container text-center">
-                <div class="row">--->
-
-
-                  <!-- Content of modal -->
-        <!--          <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Activity Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-
-
-                    <h3>Date started: 11/11/18</h3>
-                    <br>
-                    <h3> Why I started? </h3>
-                    <p> I wanted to do this activity because ......</p>
-                    <br>
-                    <h3> Days Accomplished </h3>
-                    <center><img class="img" src="project_pic.png" width="720"></center>
-
-                    <a class="button portfolio-item d-block" href="#editting-modal">Edit
-                      <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                        <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                          <i class="fas fa-search-plus fa-3x"></i>
-                        </div>
-                      </div>
-                    <a class="button1 portfolio-modal-dismiss" href="#">
-                      <i class="fa fa-close"></i>
-                    Close </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
--->
-
 
 <script id="entry-template" type="text/x-handlebars-template">
   <div class="col-md-12 col-lg-12">
     <row>
       <ul style="list-style:none">
         <a class="portfolio-item d-block" href = "#editing-information">
-          <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+          <!-- <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
             <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
               <i class="fas fa-search-plus fa-3x"></i>
             </div>
-          </div>
+          </div> -->
           <li>
             <img class="img-fluid" width="700" src="img/portfolio/cake.png" display="inline-block" alt="">
             <a style="font-size:300%" display="inline-block" class="activity-name">{{activity_name}}</a>
@@ -208,9 +120,9 @@
             <a style="font-size:150%" display="inline-block">{{activity_why}}</a>
             <a style="border: dashed; font-size: 30%; font-weight: bold; opacity: 0.25;" display="inline-block" href="Setting.html">  •   •   •  </a>
           </li>
-          <li>
+          <!-- <li>
             <img class="img-fluid" src="project_pic.png" width="720">
-          </li>
+          </li> -->
           <li onclick="remove(this)"> remove </li>
         </a>
       </ul>
@@ -218,7 +130,9 @@
   </div>
 </script>
 <!-- edit({{index}})) --> 
-<!-- -->
+
+
+
 
 <script>
   function remove(element) {
@@ -326,7 +240,7 @@
                 </div>
                 <br>
 
-                <a class="button portfolio-modal-dismiss" href="#" id="save_button">
+                <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
                   <i class="fa fa-close"></i>
                 Save </a>
 

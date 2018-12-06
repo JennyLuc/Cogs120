@@ -200,8 +200,12 @@ $('#save_button').click(createNew);
 
         // start with a simple template
         var html = template(new_activity);
-        console.log(html);
-        parentDiv.append(html);
+        // console.log(html);
+
+
+
+        //COMMENTED GTHIS OUT BC I JUST REFRESH THE PAGE AFTER CLOSING THE Add_Activity
+        // parentDiv.append(html);
       }
 
 
@@ -223,6 +227,8 @@ $('#save_button').click(createNew);
         for (var i=0; i < list.length; i++) {
           // TODO: check if there's another variable called data that can conflict
           var data = JSON.parse(localStorage.getItem('list'))[i];
+          data.index = i;
+          console.log(data);
           // console.log(data.activity_name);
           var html = template(data);
           // console.log(JSON.parse(localStorage.getItem('list'))[i]);
