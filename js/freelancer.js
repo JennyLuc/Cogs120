@@ -235,12 +235,36 @@ $('#save_button').click(createNew);
 
           // console.log(JSON.parse(localStorage.getItem('list'))[i]);
           parentDiv.append(html);
+          //THEN, GET THIS TO REFRESH THE PAGEEEEEEE
         }
       })
 
 
 
-    document.getElementById("signup_button").onclick=createUser;
+
+
+
+  function remove(element) {
+    element.remove();
+
+
+
+
+
+    // you would also need to remove it from the actual list in localStorage
+
+
+
+
+          //THEN, GET THIS TO REFRESH THE PAGEEEEEEE
+        }
+
+
+
+
+
+
+    // document.getElementById("signup_button").onclick=createUser;
 
     //After clicking on id='#save_button', creates and runs function createNew
     function createUser(){

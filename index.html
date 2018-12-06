@@ -154,19 +154,16 @@
 
 
 
+<a class="button" href="#" id="edit_button" onClick="window.location.reload()">
+Edit </a>
 
-<script>
-  function remove(element) {
-    // element.parentNode.parentNode.parentNode.remove();
-    // you would also need to remove it from the actual list in localStorage
-  }
-
+<!--
   // this is for editing:
   // begin by modifying the actual list in localstorage
   // element.parentNode.getElementsByClassName("activity-name")[0].innerHTML = "bla";
   // bla would be replaced by say, data.activity_name
   // ...where data is JSON.parse(localStorage.getItem('list'))[i]
-</script>
+-->
 
 <script id="popup-information" type="text/x-handlebars-template">
     <div class="portfolio-modal mfp-hide hello" id="editing-information">
@@ -212,8 +209,6 @@
 </div>
 </div>
 </script>
-
-
 
 
 <!-- Empty because this is where new activity templates go -->
