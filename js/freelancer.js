@@ -192,15 +192,15 @@ $('#save_button').click(createNew);
 
 
 
-        // compile the template
-        var source  = $("#entry-template").html();
-        var template = Handlebars.compile(source);
-        var parentDiv = $("#templatedProjects");
+        // // compile the template
+        // var source  = $("#entry-template").html();
+        // var template = Handlebars.compile(source);
+        // var parentDiv = $("#templatedProjects");
 
 
-        // start with a simple template
-        var html = template(new_activity);
-        // console.log(html);
+        // // start with a simple template
+        // var html = template(new_activity);
+        // // console.log(html);
 
 
 
