@@ -28,12 +28,10 @@
 
 <body id="page-top">
 
-  <!-- Navigation ALSO, I ADDED 0px PADDING TO TOP AND BOTTOM IDK IF IT MESSES A LOT WITH BOOSTRAP BUT IDK -->
+  <!-- NAVIGATION BAR--------------------------------------------------->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
   style="padding-top: 0px; padding-bottom: 0px;"
   id="mainNav">
-  <!-- This is what I edited^ -John-->
-
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
     <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,12 +41,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
 
+
+        <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+        </li>
         <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
         </li>
-        <li class="nav-item mx-0 mx-lg-1">
+        <!-- <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
-        </li>
+        </li> -->
         <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
         </li>
@@ -59,21 +61,10 @@
     </div>
   </div>
 </nav>
-
-<!-- Header -->
-<!--=
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-        <h1 class="text-uppercase mb-0">Start Bootstrap</h1>
-        <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
-      </div>
-    </header>
-  -->
+<!-- END OF NAVIGATION BAR -------------------------------------------------->
 
 
-  <!-- Header of the homepage -->
+  <!-- HEADER OF HOMEPAGE -------------------------------------------------->
   <section class="portfolio" id="portfolio">
     <div class="container">
 
@@ -82,24 +73,54 @@
       <!-- changing the name of the header -->
       <script type = "text/javascript">
 
-      var changedName = JSON.parse(localStorage.getItem('name'));
+      var changedName = localStorage.getItem('name');
       document.getElementById("myName").innerHTML = changedName + "'s Activities";
 
       </script>
 
       <hr class="star-dark mb-5">
-      <!--
-      <center>
-      <div class="input">
-        <i class="search icon"></i>
-        <input type="text" placeholder="Search Activity...">
-      </div>
-  </center>
--->
-  <br>
+      <br>
 
-      <div class="row">
+  <center>
+  <div class="input">
+    <i class="search icon"></i>
+    <input type="text" placeholder="Search Activity...">
+  </div>
+</center>
+<br>
+<!-- END OF THE HEADER ------------------------------------------------------>
 
+<a class="portfolio-item d-block" href="#portfolio-modal-2">
+  <img class = "img1" src="notification_image.png" alt="notification button" id="notification_img"
+   href="">
+</a>
+
+   <!-- NOTIFICATION------------------------------------>
+   <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-2">
+     <div class="portfolio-modal-dialog bg-white">
+       <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+         <i class="fa fa-3x fa-times"></i>
+       </a>
+       <div class="container text-center">
+         <div class="row">
+
+           <!-- Content of modal -->
+           <div class="col-lg-8 mx-auto">
+             <h2 class="text-secondary text-uppercase mb-0">Notifications</h2>
+             <hr class="star-dark mb-5">
+             <img class="img-fluid mb-5" src="notification_bell.png" height=100px width=100px>
+
+             <br>
+             <!-- need the button to close -->
+             <a class="button1 portfolio-modal-dismiss" href="#">
+               <i class="fa fa-close"></i>
+             Close </a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+<!--END OF NOTIFICATION---------------------------------------------------->
 
 
 <script id="entry-template" type="text/x-handlebars-template">
@@ -129,7 +150,7 @@
     </row>
   </div>
 </script>
-<!-- edit({{index}})) --> 
+<!-- edit({{index}})) -->
 
 
 
@@ -196,9 +217,7 @@
 
 
 <!-- Empty because this is where new activity templates go -->
-  <div id="templatedProjects" class="col-md-12 col-lg-12">
 
-  </div>
 
     <div id="savedProjects" class="col-md-12 col-lg-12">
 
@@ -239,7 +258,42 @@
                   <input type="text" placeholder="Why...." id="new_activity_why">
                 </div>
                 <br>
+                <h3> When do I want to work on this?</h3>
+                <h4> Every... </h4>
+                <select id="day">
+                    <option value="" disabled selected>Select day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
 
+                <select id = "time">
+                    <option value="" disabled selected>Select time</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <select id = "noon">
+                    <option value="" disabled selected>Select time</option>
+                    <option value="am">am</option>
+                    <option value="pm">pm</option>
+                </select>
+<br>
+<br>
                 <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
                   <i class="fa fa-close"></i>
                 Save </a>

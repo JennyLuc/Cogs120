@@ -135,9 +135,7 @@
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
-    // function myFunction(){
-    //     alert("Page is loaded");
-    // }
+
 })(jQuery); // End of use strict
 
 
@@ -242,35 +240,70 @@ $('#save_button').click(createNew);
 
 
 
-    $('#signup_button').click(createUser);
+    document.getElementById("signup_button").onclick=createUser;
+
     //After clicking on id='#save_button', creates and runs function createNew
     function createUser(){
-
-        var name = document.getElementById("first_name");
-        localStorage.setItem("first_name", name.value);
-
-        var email = document.getElementById("email");
-        localStorage.setItem("email", email.value);
+        //alert("inside createUser");
 
 
-        var user = document.getElementById("username");
-        localStorage.setItem("username", user.value);
+        var username = (document.getElementById("userSignup").value);
+        var password = (document.getElementById("passwordSignup").value);
+        var email = (document.getElementById("emailSignup").value);
+        var name = (document.getElementById("nameSignup").value);
 
+        if ((username && password && email && name )) {
+            //alert(name);
+            //var name = document.getElementById("name");
+            localStorage.setItem("name", name);
 
-        var password = document.getElementById("password");
-        localStorage.setItem("password", password.value);
+            //var email = document.getElementById("email");
+            localStorage.setItem("email", email);
+
+            //var user = document.getElementById("username");
+            localStorage.setItem("username", username);
+
+            //var password = document.getElementById("password");
+            localStorage.setItem("password", password);
+
+            var new_user = {
+                first_name: localStorage.getItem('name'),
+                email: localStorage.getItem('email'),
+                user: localStorage.getItem('username'),
+                password: localStorage.getItem('password')
+            }
+
+            window.location  = "index.html";
+
+    }else {
+        alert("Please Fill All Required Field");
+    }
 
 
 
         //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
         //to properly add to handlbars template (below)
-        var new_user = {
-            first_name: localStorage.getItem('first_name'),
-            email: localStorage.getItem('email'),
-            user: localStorage.getItem('username'),
-            password: localStorage.getItem('password')
-        }
+
     }
+
+    // function check_filled() { /*function to check all inputs are filled*/
+    //     var username = (form.user.value);
+    //     var password = (form.password.value);
+    //     var email = (form.email.value);
+    //     var name = (form.name.value);
+    //
+    //     if ((username && password && email && name )) {
+    //         localStorage.setItem('name', JSON.stringify(name));
+    //         localStorage.setItem('username', JSON.stringify(username));
+    //         localStorage.setItem('password', JSON.stringify(password));
+    //         localStorage.setItem('email', JSON.stringify(email));
+    //         window.location  = "index.html";/*opens the target page */
+    //     }
+    //     else {
+    //         alert("Please Fill All Required Field");/*displays error message*/
+    //     }
+    //
+    // }
 
     function myFunction(){
         // alert("Page is loaded");
@@ -301,9 +334,7 @@ $('#save_button').click(createNew);
                     }else if (activity.activity_time<time%12) {
                         alert("Remember to do: "+ activity.activity_name);
                     }
-                    {
 
-                    }
                 }
             }
         }
