@@ -204,11 +204,15 @@ $('#save_button').click(createNew);
 
 
 
-
-
-
+<<<<<<< HEAD
+        // start with -a simple template
+        var html = template(new_activity);
+        console.log(html);
+        parentDiv.append(html);
+=======
         //COMMENTED GTHIS OUT BC I JUST REFRESH THE PAGE AFTER CLOSING THE Add_Activity
         // parentDiv.append(html);
+>>>>>>> 103c3280618a1175deaa2ae1379a4d63f01ce878
       }
 
 
@@ -228,13 +232,16 @@ $('#save_button').click(createNew);
         // console.log(JSON.parse(localStorage.getItem('list')).length);
         console.log(list);
         for (var i=0; i < list.length; i++) {
+<<<<<<< HEAD
+          var html = template(JSON.parse(localStorage.getItem('list'))[i]);
+=======
           // TODO: check if there's another variable called data that can conflict
           var data = JSON.parse(localStorage.getItem('list'))[i];
           data.index = i;
           console.log(data);
           // console.log(data.activity_name);
           var html = template(data);
-
+>>>>>>> 103c3280618a1175deaa2ae1379a4d63f01ce878
           // console.log(JSON.parse(localStorage.getItem('list'))[i]);
           parentDiv.append(html);
         }
