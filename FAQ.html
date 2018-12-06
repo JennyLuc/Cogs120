@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>UpTo</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- Plugin CSS -->
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/freelancer.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
+        style="padding-top: 0px; padding-bottom: 0px;"
+        id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
+          <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
+              </li>
+              <!-- <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
+              </li> -->
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="FAQ.html">FAQ</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <br>
+        <br>
+        <br>
+        <center>
+            <h2>Frequently Asked Questions</h2>
+
+        <br>
+
+        <button class="accordion">What is UpTo?</button>
+        <div class="panel">
+            <p>UpTo allows you to keep track of all the of the activities and the inspirations
+            you have. We understand that sometimes you lose interest in your hobbies or forget
+            why you have started them, and thus UpTp was created to reinspire and help keep you
+            working on your goals.</p>
+        </div>
+
+        <button class="accordion">How do I get notified?</button>
+        <div class="panel">
+            <p> When you are on the Home page, there is a button
+                <img class="img-small" src="notification_image.png"> which would let you know if you
+                have a notification. These notifications are created when you create a new activity module,
+                you input your day and time you would want to be notified. </p>
+        </div>
+
+        <button class="accordion">How do I create a new activity?</button>
+        <div class="panel">
+            <p>You can create a new activity by either clicking on the "Add Activity"
+            <img class="img-small" src="activity_button.jpg"> on the home page or the "Add Activity"
+            button on the tab at the top of every page. </p>
+        </div>
+        </center>
+        <script language="javascript">
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+        <script src="js/freelancer.js"></script>
+    </body>
+</html>
