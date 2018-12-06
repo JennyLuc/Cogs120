@@ -338,11 +338,12 @@ $('#save_button').click(createNew);
                         //alert("Remember to do: "+ activity.activity_name);
 
                         document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
-                    }else if (activity.activity_time<=hour%12) {
-                        //alert("Remember to do: "+ activity.activity_name);
+                    }
+                }else{
+                    if (activity.activity_time%12<=hour%12) {
+                        alert("Remember to do: "+ activity.activity_name);
                         document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
                     }
-
                 }
             }
         }
