@@ -43,27 +43,34 @@
         <h1>
             Sign Up
         </h1>
-        <br>
-        <br>
-        <form name = "signup">
-            &nbsp;&nbsp;
-            <br>
-            <br>
-            &nbsp;&nbsp;
-            <input type="text" name="name" placeholder="First name" id = "nameSignup">
-            &nbsp;&nbsp;
-            <input type="text" name="email" placeholder="Email" id="emailSignup">
-            <br>
-            <br>
-            <input type="text" name="user" placeholder="Username" id="userSignup">
-            &nbsp;&nbsp;
-            <input type="password" name ="password" placeholder="Password" id="passwordSignup">
+
+        <form id = "signup">
 
             <br>
             <br>
-            <a class = "button" href = "index.html" id="signup_button" onclick="check_filled(this.form)">Sign Up </a>
+
+            First Name
+            <br>
+            <input type="text" placeholder="First name" id = "nameSignup">
+            <br>
+            Email
+            <br>
+            <input type="text" placeholder="Email" id="emailSignup">
+            <br>
+            Username
+            <br>
+            <input type="text" placeholder="Username" id="userSignup">
+            <br>
+            Password
+            <br>
+            <input type="password" placeholder="Password" id="passwordSignup">
+
+            <br>
+            <br>
+            <a class = "button" id="signup_button" onclick="check_filled(this.form)">Sign Up </a>
             <a class = "button1" href = "Login.html">Back</a>
         </form>
+
 
 
 
@@ -83,26 +90,7 @@
     <script src="js/handlebars-v4.0.11.js"></script>
     <script src="js/freelancer.js"></script>
 
-        <script language="javascript">
-            function check_filled(form) { /*function to check all inputs are filled*/
-                var username = (form.user.value);
-                var password = (form.password.value);
-                var email = (form.email.value);
-                var name = (form.name.value);
 
-                if ((username && password && email && name )) {
-                    localStorage.setItem('name', JSON.stringify(name));
-                    localStorage.setItem('username', JSON.stringify(username));
-                    localStorage.setItem('password', JSON.stringify(password));
-                    localStorage.setItem('email', JSON.stringify(email));
-                    window.location  = "index.html";/*opens the target page */
-                }
-                else {
-                    alert("Please Fill All Required Field");/*displays error message*/
-                }
-
-            }
-        </script>
 
 
     </body>

@@ -39,27 +39,14 @@
         <h1>
             Login
         </h1>
-        <!--
-        <p>Username:</p>
-        <div class="input">
-            <input type="text" placeholder="Username">
-        </div>
-        <p>Password:</p>
-        <div class="input">
-            <input type="text" placeholder="Password">
-        </div>
-
-        <br>
-        <a class="button" href = "index.html">Login</a>
-    -->
 
     <form name="login">
         Username <br>
-        <input type="text" name="userid" placeholder="Username"/>
+        <input type="text" id="userid" placeholder="Username"/>
         <br>
         Password
         <br>
-        <input type="password" name="pswrd" placeholder="Password"/ >
+        <input type="password" id="pswrd" placeholder="Password"/ >
         <br>
         <br>
         <input class="button" onclick="check(this.form)" value="Login"/ >
@@ -68,18 +55,18 @@
     <script type="text/javascript">
         function check(form) { /*function to check userid & password*/
             /*the following code checkes whether the entered userid and password are matching*/
-            var inputName = form.userid.value;
-            var inputPassword = form.pswrd.value;
-            //alert ("username: " + JSON.parse(localStorage.getItem('username')) +" password: "+ JSON.parse(localStorage.getItem('password')));
-           // alert ("you put in: "+ form.userid.value+"and for password: " + form.pswrd.value);
-            if(JSON.stringify(inputName) == localStorage.getItem('username') && JSON.stringify(inputPassword) == localStorage.getItem('password')) {
+            var inputName = document.getElementById("userid").value;
+            var inputPassword = document.getElementById("pswrd").value;
+
+            if(inputName == localStorage.getItem('username') && inputPassword == localStorage.getItem('password')) {
                 window.open('index.html')/*opens the target page while Id & password matches*/
             }
             else {
-                alert("Error Password or Username")/*displays error message*/
+                alert("Invalid inputs in Password or Username")/*displays error message*/
             }
         }
     </script>
+
         <br>
         <div> Don't have an account?  </div>
         <a href="SignUp.html">Sign up here </a>

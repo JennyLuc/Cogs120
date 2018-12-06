@@ -25,76 +25,112 @@
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"
         style="padding-top: 0px; padding-bottom: 0px;"
         id="mainNav">
-        <!-- This is what I edited^ -John-->
-
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
-            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Login.html">Logout</a>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
+          <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
+              </li>
+              <!-- <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
+              </li> -->
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        </nav>
+      </nav>
 
-        <!-- Add new activity template -->
-        <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
+      <!-- Add new activity template -->
+      <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
+        <div class="portfolio-modal-dialog bg-white">
+          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+          </a>
+          <div class="container text-center">
+            <div class="row">
 
+              <!-- Content of modal -->
+              <div class="col-lg-8 mx-auto">
+                <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+                <hr class="star-dark mb-5">
+                <img class="img-fluid mb-5" src="add_image.png" alt="">
 
-                        <!-- Content of modal -->
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="add_image.png" alt="">
-
-                            <!-- Need to add padding to each of these elements in the modal  -John -->
-                            <h3>Name of New Activity</h3>
-                            <div class="ui input">
-                                <input type="text" placeholder="New Activity" id="new_activity_name">
-                            </div>
-                            <h3> Why I wanted to start this activity?</h3>
-                            <div class="ui input">
-                                <input type="text" placeholder="Why...." id="new_activity_why">
-                            </div>
-                            <br>
-
-                            <a class="button portfolio-modal-dismiss" href="#" id="save_button">
-                                <i class="fa fa-close"></i>
-                                Save </a>
-
-                                <!-- need the button to close -->
-                                <a class="button1 portfolio-modal-dismiss" href="#">
-                                    <i class="fa fa-close"></i>
-                                    Close </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Need to add padding to each of these elements in the modal  -John -->
+                <h3>Name of New Activity</h3>
+                <div class="ui input">
+                  <input type="text" placeholder="New Activity" id="new_activity_name">
                 </div>
+                <h3> Why I wanted to start this activity?</h3>
+                <div class="ui input">
+                  <input type="text" placeholder="Why...." id="new_activity_why">
+                </div>
+                <br>
+                <h3> When do I want to work on this?</h3>
+                <h4> Every... </h4>
+                <select id="day">
+                    <option value="" disabled selected>Select day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+
+                <select id = "time">
+                    <option value="" disabled selected>Select time</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+
+                <select id = "noon">
+                    <option value="" disabled selected>Select time</option>
+                    <option value="am">am</option>
+                    <option value="pm">pm</option>
+                </select>
+      <br>
+      <br>
+                <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
+                  <i class="fa fa-close"></i>
+                Save </a>
+
+                <!-- need the button to close -->
+                <a class="button1 portfolio-modal-dismiss" href="#">
+                  <i class="fa fa-close"></i>
+                Close </a>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
                 <center>
                     <br>
@@ -181,12 +217,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 portfolio-item" href="#portfolio-modal-1" >Add Activity</a>
+          </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
         </li>
-        <li class="nav-item mx-0 mx-lg-1">
+        <!-- <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
-        </li>
+        </li> -->
         <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
         </li>
@@ -206,6 +245,9 @@
     </center>
   </form>
 </center>
+
+
+
   <script type="text/javascript">
 
     function saving(form)
@@ -238,7 +280,21 @@
       window.location  = "index.html";
     }
   </script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/handlebars-v4.0.11.js"></script>
+  <script src="js/freelancer.js"></script>
 </body>
 
 </html>
