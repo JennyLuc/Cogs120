@@ -245,10 +245,14 @@ $('#save_button').click(createNew);
 
 
 
-
   function remove(element) {
-    element.remove();
-
+    console.log(element);
+    list = JSON.parse(localStorage.getItem('list'));
+    list.splice(element, 1);
+    console.log("New List");
+    console.log(list);
+    localStorage.setItem('list', JSON.stringify(list));
+    //lement.remove();
 
 
 
@@ -268,7 +272,9 @@ $('#save_button').click(createNew);
 
     // document.getElementById("signup_button").onclick=createUser;
 
-    //After clicking on id='#save_button', creates and runs function createNew
+    // //After clicking on 
+    // id='#save_button'
+    // , creates and runs function createNew
     function createUser(){
         //alert("inside createUser");
 
