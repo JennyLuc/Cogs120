@@ -482,3 +482,14 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+
+.img1{
+    position: fixed;
+    /* float: right; */
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    right:70px;
+    bottom: 60px;
+
+}

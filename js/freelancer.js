@@ -198,7 +198,7 @@ $('#save_button').click(createNew);
         var parentDiv = $("#templatedProjects");
 
 
-        // start with a simple template
+        // start with -a simple template
         var html = template(new_activity);
         console.log(html);
         parentDiv.append(html);
@@ -221,7 +221,7 @@ $('#save_button').click(createNew);
         // console.log(JSON.parse(localStorage.getItem('list')).length);
         for (var i=0; i < list.length; i++) {
           var html = template(JSON.parse(localStorage.getItem('list'))[i]);
-          console.log(JSON.parse(localStorage.getItem('list'))[i]);
+          // console.log(JSON.parse(localStorage.getItem('list'))[i]);
           parentDiv.append(html);
         }
       })
@@ -258,37 +258,39 @@ $('#save_button').click(createNew);
         }
     }
 
-    // function myFunction(){
-    //     alert("Page is loaded");
-    //     alert (JSON.parse(typeof localStorage.getItem('list'))[0].activity_name);
-    //     var d = new Date();
-    //     var weekday = new Array(7);
-    //     weekday[0] = "Sunday";
-    //     weekday[1] = "Monday";
-    //     weekday[2] = "Tuesday";
-    //     weekday[3] = "Wednesday";
-    //     weekday[4] = "Thursday";
-    //     weekday[5] = "Friday";
-    //     weekday[6] = "Saturday";
-    //     var n = weekday[d.getDay()];
-    //     var hour = d.getHours();
-    //     for (int i =0; i<list.length; i++)
-    //     {
-    //         if(list[i]==)
-    //         if (JSON.parse(localStorage.getItem('list'))[0].activity_day == n)
-    //         {
-    //             if (JSON.parse(localStorage.getItem('list'))[0].activity_noon == "am")
-    //             {
-    //                 if (JSON.parse(localStorage.getItem('list'))[0].activity_time<time)
-    //                 {
-    //                     alert("Remember to do: "+ JSON.parse(localStorage.getItem('list'))[0].activity_name);
-    //                 }else if (JSON.parse(localStorage.getItem('list'))[0].activity_time<time%12) {
-    //                     alert("Remember to do: "+ JSON.parse(localStorage.getItem('list'))[0].activity_name);
-    //                 }
-    //                 {
-    //
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    function myFunction(){
+        // alert("Page is loaded");
+        // alert (JSON.parse(typeof localStorage.getItem('list'))[0].activity_name);
+        var d = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        var n = weekday[d.getDay()];
+        var hour = d.getHours();
+        var list = JSON.parse(localStorage.getItem('list'));
+        for (var i = 0; i < list.length; i++)
+        {
+            var activity = JSON.parse(localStorage.getItem('list'))[i];
+            console.log(activity.activity_name);
+            if (activity.activity_day == n)
+            {
+                if (activity.activity_noon == "am")
+                {
+                    if (activity.activity_time<time)
+                    {
+                        alert("Remember to do: "+ activity.activity_hour);
+                    }else if (activity.activity_time<time%12) {
+                        alert("Remember to do: "+ activity.activity_name);
+                    }
+                    {
+
+                    }
+                }
+            }
+        }
+    }
