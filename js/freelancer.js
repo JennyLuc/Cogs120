@@ -157,24 +157,23 @@ $('#save_button').click(createNew);
         var why = document.getElementById("new_activity_why");
         localStorage.setItem("new_activity_why", why.value);
 
-        // var day = document.getElementById("day");
-        // localStorage.setItem("new_activity_day", day.value);
+        var day = document.getElementById("day");
+        localStorage.setItem("new_activity_day", day.value);
 
-        // var time = document.getElementById("time");
-        // localStorage.setItem("new_activity_time", time.value);
+        var time = document.getElementById("time");
+        localStorage.setItem("new_activity_time", time.value);
 
-        // var noon = document.getElementById("noon");
-        // localStorage.setItem("new_activity_noon", noon.value);
-
-
+        var noon = document.getElementById("noon");
+        localStorage.setItem("new_activity_noon", noon.value);
 
         var new_activity = {
           activity_name: localStorage.getItem('new_activity_name'),
           activity_why: localStorage.getItem('new_activity_why'),
-          // activity_day: localStorage.getItem('new_activity_day'),
-          // activity_time: localStorage.getItem('new_activity_time'),
-          // activity_noon: localStorage.getItem('new_activity_noon')
+          activity_day: localStorage.getItem('new_activity_day'),
+          activity_time: localStorage.getItem('new_activity_time'),
+          activity_noon: localStorage.getItem('new_activity_noon')
         }
+
 
 
 
@@ -183,6 +182,9 @@ $('#save_button').click(createNew);
         activity_list.push({
           activity_name: localStorage.getItem('new_activity_name'),
           activity_why: localStorage.getItem('new_activity_why'),
+          activity_day: localStorage.getItem('new_activity_day'),
+          activity_time: localStorage.getItem('new_activity_time'),
+          activity_noon: localStorage.getItem('new_activity_noon')
         });
         console.log(activity_list);
         // then put it back.
@@ -309,6 +311,7 @@ $('#save_button').click(createNew);
         // alert("Page is loaded");
         // alert (JSON.parse(typeof localStorage.getItem('list'))[0].activity_name);
         var d = new Date();
+
         var weekday = new Array(7);
         weekday[0] = "Sunday";
         weekday[1] = "Monday";
@@ -323,16 +326,21 @@ $('#save_button').click(createNew);
         for (var i = 0; i < list.length; i++)
         {
             var activity = JSON.parse(localStorage.getItem('list'))[i];
-            console.log(activity.activity_name);
+            console.log(activity.activity_day);
+            console.log(activity.activity_time);
+            console.log(activity.activity_noon);
             if (activity.activity_day == n)
             {
                 if (activity.activity_noon == "am")
                 {
-                    if (activity.activity_time<time)
+                    if (activity.activity_time<=hour)
                     {
-                        alert("Remember to do: "+ activity.activity_hour);
-                    }else if (activity.activity_time<time%12) {
-                        alert("Remember to do: "+ activity.activity_name);
+                        //alert("Remember to do: "+ activity.activity_name);
+
+                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
+                    }else if (activity.activity_time<=hour%12) {
+                        //alert("Remember to do: "+ activity.activity_name);
+                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
                     }
 
                 }
