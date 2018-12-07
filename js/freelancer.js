@@ -356,7 +356,7 @@ $('#save_button').click(createNew);
                 }else{
                     if (activity.activity_time%12<=hour%12) {
                         //alert("Remember to do: "+ activity.activity_name);
-                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "
+                        document.getElementById("notification_messages").innerHTML = "Reminder: "
                         + activity.activity_name +" today at "+activity.activity_time+activity.activity_noon+" !";
                     }
                 }
