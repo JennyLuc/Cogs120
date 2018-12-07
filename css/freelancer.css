@@ -76,32 +76,25 @@ width:150px;
 
 .button:hover {
     background-color: #ffffff;
+    border: 1px solid #008CBA;
     color: #008CBA;
-    border: 1px solid #008CBA
 }
 
 .button1:hover{
     background-color: #ffffff;
     color: #FC4A1A;
-    border: 1px solid #FC4A1A
+    border: 1px solid #FC4A1A;
 }
 
 .button2:hover {
     background-color: #ffffff;
     color: #008CBA;
-    border: 1px solid #008CBA
-}
-
-.button:link{
-    background-color: #b4b4b4;
-}
-
-.buton1:link{
-    background-color: #b4b4b4;
+    border: 1px solid #008CBA;
 }
 
 .button:active {
-    background-color: #b4b4b4;
+    background-color: #ffffff;
+    color: #008CBA;
 }
 
 .button1:active{
@@ -532,5 +525,65 @@ a:focus, a:hover, a:active {
     padding-bottom: 2.5px;
     padding-left: 2.5px;
     padding-right: 2.5px;
+
+}
+.search-img{
+    width: 40px;
+    height: 40px;
+    padding-top:0px;
+    padd-bottom:0px;
+}
+
+.search-button{
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px ;
+    height:40px;
+    width:40px;
+
+}
+.search-button:hover {
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
+}
+
+.notification-button{
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px ;
+    height:76px;
+    width:95px;
+    border-radius: 50%;
+
+}
+
+.notification-button:hover{
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
+}
+
+#signup_button{
+    color:#ffffff
+}
+
+}
+#signup_button:hover{
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
 
 }
