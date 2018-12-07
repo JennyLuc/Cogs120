@@ -260,7 +260,7 @@ $('#save_button').click(createNew);
 
     // document.getElementById("signup_button").onclick=createUser;
 
-    // //After clicking on 
+    // //After clicking on
     // id='#save_button'
     // , creates and runs function createNew
     function createUser(){
@@ -354,8 +354,12 @@ $('#save_button').click(createNew);
                     {
                         //alert("Remember to do: "+ activity.activity_name);
 
-                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "
-                        + activity.activity_name +" today at "+activity.time+activity.noon+" !";
+                        document.getElementById("notification_messages").innerHTML = "Reminder: "
+                        + activity.activity_name +" today at "+activity.activity_time+activity.activity_noon +" !";
+                        // +
+                        // " !%0D%0A Remember you were inspired to "+ activity.activity_name+ ", for the reason "+
+                        // activity.activity_why;
+
                     }
                 }else{
                     if (activity.activity_time%12<=hour%12) {

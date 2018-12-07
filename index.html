@@ -74,7 +74,7 @@
       <script type = "text/javascript">
 
       var changedName = localStorage.getItem('name');
-      document.getElementById("myName").innerHTML = changedName + "s Activities";
+      document.getElementById("myName").innerHTML = changedName + "'s Activities";
 
       </script>
 
@@ -148,9 +148,9 @@
             <br>
             <a style="font-weight: bold;">..every {{activity_day}} {{activity_time}} {{activity_noon}}</a>
           </li>
-          <li onclick="remove({{index}})"> 
-            <img class="img-fluid" width="21" src="img/portfolio/trashcan.png"> 
-          </li>
+          <a class="trash-button"onclick="remove({{index}})" id="trash">
+            <img class="img-small"  src="img/portfolio/trashcan.png">
+        </a>
         </a>
       </ul>
     </row>
