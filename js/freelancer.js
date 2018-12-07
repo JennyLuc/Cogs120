@@ -258,7 +258,7 @@ $('#save_button').click(createNew);
 
 
 
-    // document.getElementById("signup_button").onclick=createUser;
+    document.getElementById("signup_button").onclick=createUser;
 
     // //After clicking on
     // id='#save_button'
@@ -268,10 +268,10 @@ $('#save_button').click(createNew);
         var password = (document.getElementById("passwordSignup").value);
         var email = (document.getElementById("emailSignup").value);
         var name = (document.getElementById("nameSignup").value);
-        alert(name);
+        //alert(name);
         if (!(username && password && email && name ))
         {
-            alert("Please fill in all fields.");
+            //alert("Please fill in all fields.");
         }else{
             //alert(name);
             //var name = document.getElementById("name");
@@ -293,35 +293,28 @@ $('#save_button').click(createNew);
                 user: localStorage.getItem('username'),
                 password: localStorage.getItem('password')
             }
-
             window.location  = "index.html";
+        }
     }
 
-
-
-        //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
-        //to properly add to handlbars template (below)
-
-      }
-
-      function check_filled() { /*function to check all inputs are filled*/
-        var username = (form.user.value);
-        var password = (form.password.value);
-        var email = (form.email.value);
-        var name = (form.name.value);
-
-        if ((username && password && email && name )) {
-          localStorage.setItem('name', JSON.stringify(name));
-          localStorage.setItem('username', JSON.stringify(username));
-          localStorage.setItem('password', JSON.stringify(password));
-          localStorage.setItem('email', JSON.stringify(email));
-          window.location  = "index.html";/*opens the target page */
-        }
-        else {
-          alert("Please Fill All Required Field");/*displays error message*/
-        }
-
-      }
+      // function check_filled() { /*function to check all inputs are filled*/
+      //   var username = (form.user.value);
+      //   var password = (form.password.value);
+      //   var email = (form.email.value);
+      //   var name = (form.name.value);
+      //
+      //   if ((username && password && email && name )) {
+      //     localStorage.setItem('name', JSON.stringify(name));
+      //     localStorage.setItem('username', JSON.stringify(username));
+      //     localStorage.setItem('password', JSON.stringify(password));
+      //     localStorage.setItem('email', JSON.stringify(email));
+      //     window.location  = "index.html";/*opens the target page */
+      //   }
+      //   else {
+      //     alert("Please Fill All Required Field");/*displays error message*/
+      //   }
+      //
+      // }
 
     function myFunction(){
         // alert("Page is loaded");
