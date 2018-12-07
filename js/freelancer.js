@@ -276,7 +276,6 @@ $('#save_button').click(createNew);
             //alert(name);
             //var name = document.getElementById("name");
             localStorage.setItem("name", name);
-            alert(localStorage.getItem('name'));
 
             //var email = document.getElementById("email");
             localStorage.setItem("email", email);
