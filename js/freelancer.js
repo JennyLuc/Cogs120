@@ -54,10 +54,10 @@
 
    function nameChange()
    {
-       var changedName = localStorage.getItem('name');
-       document.getElementById("myName").innerHTML = localStorage.getItem("name") + "'s Activities";
+     var changedName = localStorage.getItem('name');
+     document.getElementById("myName").innerHTML = localStorage.getItem("name") + "'s Activities";
    }
-  $("#saveInSetting").click(function()
+ $("#saveInSetting").click(function()
   {
       alert ("hello");
       var username = (document.getElementById('userSetting').value);
@@ -202,18 +202,9 @@ $('#save_button').click(createNew);
         // var html = template(new_activity);
         // // console.log(html);
 
-
-
-
-
-
         //COMMENTED GTHIS OUT BC I JUST REFRESH THE PAGE AFTER CLOSING THE Add_Activity
         // parentDiv.append(html);
       }
-
-
-
-
 
 
 
@@ -252,15 +243,12 @@ $('#save_button').click(createNew);
     console.log("New List");
     console.log(list);
     localStorage.setItem('list', JSON.stringify(list));
+
+
+    window.location.reload();
     //lement.remove();
 
-
-
-
     // you would also need to remove it from the actual list in localStorage
-
-
-
 
           //THEN, GET THIS TO REFRESH THE PAGEEEEEEE
         }
@@ -316,26 +304,26 @@ $('#save_button').click(createNew);
         //combines 'name' and 'why' into new object with properties 'activity_name' & 'activity_why'
         //to properly add to handlbars template (below)
 
-    }
+      }
 
-    // function check_filled() { /*function to check all inputs are filled*/
-    //     var username = (form.user.value);
-    //     var password = (form.password.value);
-    //     var email = (form.email.value);
-    //     var name = (form.name.value);
-    //
-    //     if ((username && password && email && name )) {
-    //         localStorage.setItem('name', JSON.stringify(name));
-    //         localStorage.setItem('username', JSON.stringify(username));
-    //         localStorage.setItem('password', JSON.stringify(password));
-    //         localStorage.setItem('email', JSON.stringify(email));
-    //         window.location  = "index.html";/*opens the target page */
-    //     }
-    //     else {
-    //         alert("Please Fill All Required Field");/*displays error message*/
-    //     }
-    //
-    // }
+      function check_filled() { /*function to check all inputs are filled*/
+        var username = (form.user.value);
+        var password = (form.password.value);
+        var email = (form.email.value);
+        var name = (form.name.value);
+
+        if ((username && password && email && name )) {
+          localStorage.setItem('name', JSON.stringify(name));
+          localStorage.setItem('username', JSON.stringify(username));
+          localStorage.setItem('password', JSON.stringify(password));
+          localStorage.setItem('email', JSON.stringify(email));
+          window.location  = "index.html";/*opens the target page */
+        }
+        else {
+          alert("Please Fill All Required Field");/*displays error message*/
+        }
+
+      }
 
     function myFunction(){
         // alert("Page is loaded");
