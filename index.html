@@ -33,7 +33,7 @@
   style="padding-top: 0px; padding-bottom: 0px;"
   id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#portfolio">Up.To</a>
+    <a class="navbar-brand js-scroll-trigger" href="#portfolio">Ignite2inspire</a>
     <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -69,11 +69,11 @@
     <div class="container">
 
 
-      <h2 class="text-center text-uppercase text-secondary mb-0" name = "hello" id = "myName">  Name's Activities</h2>
+      <h2 class="text-center text-uppercase text-secondary mb-0" id = "myName">  Name's Activities</h2>
       <!-- changing the name of the header -->
       <script type = "text/javascript">
 
-      var changedName = JSON.parse(localStorage.getItem('name'));
+      var changedName = localStorage.getItem('name');
       document.getElementById("myName").innerHTML = changedName + "'s Activities";
 
       </script>

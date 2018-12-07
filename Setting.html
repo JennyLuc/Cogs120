@@ -26,7 +26,7 @@
         style="padding-top: 0px; padding-bottom: 0px;"
         id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
+          <a class="navbar-brand js-scroll-trigger" href="index.html">I2I</a>
           <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -164,22 +164,22 @@
 
       if (inputUser)
       {
-        localStorage.setItem('username', JSON.stringify(inputUser));
+        localStorage.setItem('username', inputUser);
       }
 
       if (inputName)
       {
-        localStorage.setItem('name', JSON.stringify(inputName));
+        localStorage.setItem('name',inputName);
       }
 
       if(inputPassword)
       {
-        localStorage.setItem('password', JSON.stringify(inputPassword));
+        localStorage.setItem('password', inputPassword);
       }
 
       if(inputEmail)
       {
-        localStorage.setItem('email', JSON.stringify(inputEmail));
+        localStorage.setItem('email',inputEmail);
     }
       window.location  = "index.html";
     }
@@ -245,9 +245,9 @@
                 <option value="am">am</option>
                 <option value="pm">pm</option>
             </select>
-  <br>
-  <br>
-            <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
+            <br>
+            <br>
+            <a class="button portfolio-modal-dismiss" href="#" id="save_button">
               <i class="fa fa-close"></i>
             Save </a>
 

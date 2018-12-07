@@ -212,11 +212,6 @@ $('#save_button').click(createNew);
       }
 
 
-
-
-
-
-
       $(document).ready(function(){
 
         list = JSON.parse(localStorage.getItem('list'));
@@ -246,18 +241,19 @@ $('#save_button').click(createNew);
 
     //After clicking on id='#save_button', creates and runs function createNew
     function createUser(){
-        //alert("inside createUser");
-
-
         var username = (document.getElementById("userSignup").value);
         var password = (document.getElementById("passwordSignup").value);
         var email = (document.getElementById("emailSignup").value);
         var name = (document.getElementById("nameSignup").value);
-
-        if ((username && password && email && name )) {
+        alert(name);
+        if (!(username && password && email && name ))
+        {
+            alert("Please fill in all fields.");
+        }else{
             //alert(name);
             //var name = document.getElementById("name");
             localStorage.setItem("name", name);
+            alert(localStorage.getItem('name'));
 
             //var email = document.getElementById("email");
             localStorage.setItem("email", email);
@@ -276,9 +272,6 @@ $('#save_button').click(createNew);
             }
 
             window.location  = "index.html";
-
-    }else {
-        alert("Please Fill All Required Field");
     }
 
 

@@ -76,32 +76,25 @@ width:150px;
 
 .button:hover {
     background-color: #ffffff;
+    border: 1px solid #008CBA;
     color: #008CBA;
-    border: 1px solid #008CBA
 }
 
 .button1:hover{
     background-color: #ffffff;
     color: #FC4A1A;
-    border: 1px solid #FC4A1A
+    border: 1px solid #FC4A1A;
 }
 
 .button2:hover {
     background-color: #ffffff;
     color: #008CBA;
-    border: 1px solid #008CBA
-}
-
-.button:link{
-    background-color: #008CBA;
-}
-
-.buton1:link{
-    background-color: #b4b4b4;
+    border: 1px solid #008CBA;
 }
 
 .button:active {
     background-color: #ffffff;
+    color: #008CBA;
 }
 
 .button1:active{
@@ -581,4 +574,16 @@ a:focus, a:hover, a:active {
     background-color: #ffffff;
     color: #008CBA;
     border: 1px solid #008CBA
+}
+
+#signup_button{
+    color:#ffffff
+}
+
+}
+#signup_button:hover{
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
+
 }
