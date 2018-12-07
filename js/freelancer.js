@@ -326,6 +326,7 @@ $('#save_button').click(createNew);
         for (var i = 0; i < list.length; i++)
         {
             var activity = JSON.parse(localStorage.getItem('list'))[i];
+            console.log(activity.activity_name);
             console.log(activity.activity_day);
             console.log(activity.activity_time);
             console.log(activity.activity_noon);
@@ -337,12 +338,14 @@ $('#save_button').click(createNew);
                     {
                         //alert("Remember to do: "+ activity.activity_name);
 
-                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
+                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "
+                        + activity.activity_name +" today at "+activity.time+activity.noon+" !";
                     }
                 }else{
                     if (activity.activity_time%12<=hour%12) {
-                        alert("Remember to do: "+ activity.activity_name);
-                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "+ activity.activity_name +" today!";
+                        //alert("Remember to do: "+ activity.activity_name);
+                        document.getElementById("notification_messages").innerHTML = "Reminder to do: "
+                        + activity.activity_name +" today at "+activity.activity_time+activity.activity_noon+" !";
                     }
                 }
             }

@@ -26,7 +26,7 @@
         style="padding-top: 0px; padding-bottom: 0px;"
         id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
+          <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
           <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -56,84 +56,7 @@
             </ul>
           </div>
         </div>
-      </nav>
-
-      <!-- Add new activity template -->
-      <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
-        <div class="portfolio-modal-dialog bg-white">
-          <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-          </a>
-          <div class="container text-center">
-            <div class="row">
-
-              <!-- Content of modal -->
-              <div class="col-lg-8 mx-auto">
-                <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
-                <hr class="star-dark mb-5">
-                <img class="img-fluid mb-5" src="add_image.png" alt="">
-
-                <!-- Need to add padding to each of these elements in the modal  -John -->
-                <h3>Name of New Activity</h3>
-                <div class="ui input">
-                  <input type="text" placeholder="New Activity" id="new_activity_name">
-                </div>
-                <h3> Why I wanted to start this activity?</h3>
-                <div class="ui input">
-                  <input type="text" placeholder="Why...." id="new_activity_why">
-                </div>
-                <br>
-                <h3> When do I want to work on this?</h3>
-                <h4> Every... </h4>
-                <select id="day">
-                    <option value="" disabled selected>Select day</option>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
-
-                <select id = "time">
-                    <option value="" disabled selected>Select time</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-
-                <select id = "noon">
-                    <option value="" disabled selected>Select time</option>
-                    <option value="am">am</option>
-                    <option value="pm">pm</option>
-                </select>
-      <br>
-      <br>
-                <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
-                  <i class="fa fa-close"></i>
-                Save </a>
-
-                <!-- need the button to close -->
-                <a class="button1 portfolio-modal-dismiss" href="#">
-                  <i class="fa fa-close"></i>
-                Close </a>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </nav>
 
                 <center>
                     <br>
@@ -171,15 +94,20 @@
 
                         </center>
                     </form>
-                    <script type="text/javascript">
+                    <!-- <script type="text/javascript">
 
                         function saving(form)
                         {
-                            // alert("here");
-                            var inputUser = (form.user.value);
-                            var inputPassword = (form.password.value);
-                            var inputEmail = (form.email.value);
-                            var inputName = (form.name.value);
+                            alert("here");
+                            var inputUser = (document.getElementById("user").value);
+                            var inputPassword = (form.document.getElementById("password").value);
+                            var inputEmail = (form.document.getElementById("email").value);
+                            var inputName = (form.document.getElementById("name").value);
+
+                            if(!(inputUser && inputPassword && inputEmail && inputName))
+                            {
+                                alert("All fields are empty.");
+                            }
                             if (inputUser)
                             {
                                 localStorage.setItem('username', JSON.stringify(inputUser));
@@ -188,6 +116,7 @@
                             if (inputName)
                             {
                                 localStorage.setItem('name', JSON.stringify(inputName));
+                                alert(inputName);
                             }
 
                             if(inputPassword)
@@ -199,11 +128,13 @@
                             {
                                 localStorage.setItem('email', JSON.stringify(inputEmail));
                             }
+                            alert(inputName);
                             window.location  = "index.html";
+
                         }
 
 
-        </script>
+        </script> -->
 <center>
   <br>
   <br>
@@ -226,6 +157,11 @@
       var inputEmail = (form.email.value);
       var inputName = (form.name.value);
 
+      if(!(inputUser || inputPassword || inputEmail || inputName))
+      {
+          alert("All fields are empty.");
+      }else{
+
       if (inputUser)
       {
         localStorage.setItem('username', JSON.stringify(inputUser));
@@ -244,10 +180,88 @@
       if(inputEmail)
       {
         localStorage.setItem('email', JSON.stringify(inputEmail));
-      }
+    }
       window.location  = "index.html";
     }
+}
   </script>
+
+  <!-- Add new activity template -->
+  <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+
+          <!-- Content of modal -->
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="add_image.png" alt="">
+
+            <!-- Need to add padding to each of these elements in the modal  -John -->
+            <h3>Name of New Activity</h3>
+            <div class="ui input">
+              <input type="text" placeholder="New Activity" id="new_activity_name">
+            </div>
+            <h3> Why I wanted to start this activity?</h3>
+            <div class="ui input">
+              <input type="text" placeholder="Why...." id="new_activity_why">
+            </div>
+            <br>
+            <h3> When do I want to work on this?</h3>
+            <h4> Every... </h4>
+            <select id="day">
+                <option value="" disabled selected>Select day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+
+            <select id = "time">
+                <option value="" disabled selected>Select time</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <select id = "noon">
+                <option value="" disabled selected>Select time</option>
+                <option value="am">am</option>
+                <option value="pm">pm</option>
+            </select>
+  <br>
+  <br>
+            <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
+              <i class="fa fa-close"></i>
+            Save </a>
+
+            <!-- need the button to close -->
+            <a class="button1 portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+            Close </a>
+
+
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

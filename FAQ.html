@@ -26,7 +26,7 @@
         style="padding-top: 0px; padding-bottom: 0px;"
         id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
+          <a class="navbar-brand js-scroll-trigger" href="index.html">UpTo</a>
           <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -41,9 +41,6 @@
               <li class="nav-item mx-0 mx-lg-1">
                   <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
               </li>
-              <!-- <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
-              </li> -->
               <li class="nav-item mx-0 mx-lg-1">
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
               </li>
@@ -61,7 +58,7 @@
         <br>
         <br>
         <center>
-            <h2>Frequently Asked Questions</h2>
+            <h1>Frequently Asked Questions</h1>
 
         <br>
 
@@ -78,14 +75,14 @@
             <p> When you are on the Home page, there is a button
                 <img class="img-small" src="notification_image.png"> which would let you know if you
                 have a notification. These notifications are created when you create a new activity module,
-                you input your day and time you would want to be notified. </p>
+                you input your day and time you would want to be notified.</p>
         </div>
 
         <button class="accordion">How do I create a new activity?</button>
         <div class="panel">
             <p>You can create a new activity by either clicking on the "Add Activity"
-            <img class="img-small" src="activity_button.jpg"> on the home page or the "Add Activity"
-            button on the tab at the top of every page. </p>
+            <img class="img-small" src="activity_button.jpg" href ="index.html">
+            on the home page or the "Add Activity" button on the tab at the top of every page. </p>
         </div>
         </center>
         <script language="javascript">
@@ -105,5 +102,182 @@
             }
         </script>
         <script src="js/freelancer.js"></script>
+
+        <!-- Add new activity template -->
+        <div class="portfolio-modal mfp-hide hello" id="portfolio-modal-1">
+          <div class="portfolio-modal-dialog bg-white">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+              <i class="fa fa-3x fa-times"></i>
+            </a>
+            <div class="container text-center">
+              <div class="row">
+
+
+                <!-- Content of modal -->
+                <div class="col-lg-8 mx-auto">
+                  <h2 class="text-secondary text-uppercase mb-0">Start a New Activity</h2>
+                  <hr class="star-dark mb-5">
+                  <img class="img-fluid mb-5" src="add_image.png" alt="">
+
+                  <!-- Need to add padding to each of these elements in the modal  -John -->
+                  <h3>Name of New Activity</h3>
+                  <div class="ui input">
+                    <input type="text" placeholder="New Activity" id="new_activity_name">
+                  </div>
+                  <h3> Why I wanted to start this activity?</h3>
+                  <div class="ui input">
+                    <input type="text" placeholder="Why...." id="new_activity_why">
+                  </div>
+                  <br>
+                  <h3> When do I want to work on this?</h3>
+                  <h4> Every... </h4>
+                  <select id="day">
+                      <option value="" disabled selected>Select day</option>
+                      <option value="Monday">Monday</option>
+                      <option value="Tuesday">Tuesday</option>
+                      <option value="Wednesday">Wednesday</option>
+                      <option value="Thursday">Thursday</option>
+                      <option value="Friday">Friday</option>
+                      <option value="Saturday">Saturday</option>
+                      <option value="Sunday">Sunday</option>
+                  </select>
+
+                  <select id = "time">
+                      <option value="" disabled selected>Select time</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                  </select>
+
+                  <select id = "noon">
+                      <option value="" disabled selected>Select time</option>
+                      <option value="am">am</option>
+                      <option value="pm">pm</option>
+                  </select>
+  <br>
+  <br>
+                  <a class="button portfolio-modal-dismiss" href="#" id="save_button" onClick="window.location.reload()">
+                    <i class="fa fa-close"></i>
+                  Save </a>
+
+                  <!-- need the button to close -->
+                  <a class="button1 portfolio-modal-dismiss" href="#">
+                    <i class="fa fa-close"></i>
+                  Close </a>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+  <!--- activity-3-modal ---->
+  <div class="portfolio-modal mfp-hide hello" id="activity-1-modal">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+
+
+          <!-- Content of modal -->
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Activity Name</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+
+
+            <h3>Date started: 11/11/18</h3>
+            <br>
+            <h3> Why I started? </h3>
+            <p> I wanted to do this activity because ......</p>
+            <br>
+            <h3> Days Accomplished </h3>
+            <center><img class="img" src="project_pic.png" width="720"></center>
+
+            <a class="button portfolio-item d-block" href="#editting-modal">Edit
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+            <a class="button1 portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+            Close </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--- Edit button ---->
+  <div class="portfolio-modal mfp-hide hello" id="editting-modal">
+    <div class="portfolio-modal-dialog bg-white">
+      <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+        <i class="fa fa-3x fa-times"></i>
+      </a>
+      <div class="container text-center">
+        <div class="row">
+
+
+          <!-- Content of modal -->
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-secondary text-uppercase mb-0">Edit [Activity Name]</h2>
+            <hr class="star-dark mb-5">
+            <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+
+            <h3>Change Activity Name</h3>
+            <div class="ui input">
+              <input type="text" placeholder="New Activity Name">
+            </div>
+            <h3> Change reason why I started this activity</h3>
+            <div class="ui input">
+              <input type="text" placeholder="Why....">
+            </div>
+            <br>
+            <button class="button">
+              Save
+          </button>
+
+            <!-- need the button to close -->
+            <button class="button1 portfolio-modal-dismiss" href="#">
+              <i class="fa fa-close"></i>
+            Close </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="js/handlebars-v4.0.11.js"></script>
+        <script src="js/freelancer.js"></script>
     </body>
+
+
 </html>

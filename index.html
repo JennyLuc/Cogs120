@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>UpTo</title>
+  <title>Up.To</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
   style="padding-top: 0px; padding-bottom: 0px;"
   id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#portfolio">UpTo</a>
+    <a class="navbar-brand js-scroll-trigger" href="#portfolio">Up.To</a>
     <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -48,9 +48,6 @@
         <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">Home</a>
         </li>
-        <!-- <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Profile.html">Profile</a>
-        </li> -->
         <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Setting.html">Setting</a>
         </li>
@@ -76,25 +73,27 @@
       <!-- changing the name of the header -->
       <script type = "text/javascript">
 
-      var changedName = localStorage.getItem('name');
+      var changedName = JSON.parse(localStorage.getItem('name'));
       document.getElementById("myName").innerHTML = changedName + "'s Activities";
 
       </script>
 
       <hr class="star-dark mb-5">
       <br>
-
+<!-- END OF THE HEADER ------------------------------------------------------>
   <center>
   <div class="input">
-    <i class="search icon"></i>
     <input type="text" placeholder="Search Activity...">
+    <button class="search-button" id="search">
+        <img class= "search-img"  src ="searchimg.png"/>
+    </button>
   </div>
 </center>
 <br>
-<!-- END OF THE HEADER ------------------------------------------------------>
 
+<!-- NOTIFICATION BUTTON ----------------------------------------------------->
 <a class="portfolio-item d-block" href="#portfolio-modal-2">
-  <img class = "img1" src="notification_image.png" alt="notification button" id="notification_img"
+  <img class = "notification-button img1" src="notification_image.png" alt="notification button" id="notification_img"
    href="">
 </a>
 
@@ -230,7 +229,7 @@
 
   </div>
 
-              <!-- Activity Button -->
+              <!-- Activity Button ------------------------------------------>
               <a class="portfolio-item d-block" href="#portfolio-modal-1">
                 <img class="img-fluid" width="275" src="activity_button.jpg" alt="">
               </a>
@@ -416,7 +415,7 @@
     <!-- Custom scripts for this template -->
     <script src="js/handlebars-v4.0.11.js"></script>
     <script src="js/freelancer.js"></script>
-    <!-- <script type="text/javascript" src="Setting.html"></script> -->
+
 
 
 

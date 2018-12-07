@@ -59,7 +59,7 @@
             var inputPassword = document.getElementById("pswrd").value;
 
             if(inputName == localStorage.getItem('username') && inputPassword == localStorage.getItem('password')) {
-                window.open('index.html')/*opens the target page while Id & password matches*/
+                window.location="index.html";/*opens the target page while Id & password matches*/
             }
             else {
                 alert("Invalid inputs in Password or Username")/*displays error message*/

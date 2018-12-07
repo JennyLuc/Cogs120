@@ -93,7 +93,7 @@ width:150px;
 }
 
 .button:link{
-    background-color: #b4b4b4;
+    background-color: #008CBA;
 }
 
 .buton1:link{
@@ -101,7 +101,7 @@ width:150px;
 }
 
 .button:active {
-    background-color: #b4b4b4;
+    background-color: #ffffff;
 }
 
 .button1:active{
@@ -533,4 +533,52 @@ a:focus, a:hover, a:active {
     padding-left: 2.5px;
     padding-right: 2.5px;
 
+}
+.search-img{
+    width: 40px;
+    height: 40px;
+    padding-top:0px;
+    padd-bottom:0px;
+}
+
+.search-button{
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px ;
+    height:40px;
+    width:40px;
+
+}
+.search-button:hover {
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
+}
+
+.notification-button{
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px ;
+    height:76px;
+    width:95px;
+    border-radius: 50%;
+
+}
+
+.notification-button:hover{
+    background-color: #ffffff;
+    color: #008CBA;
+    border: 1px solid #008CBA
 }
